@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Saska baza</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Saska K&#281;pa / wynajem</p>
+        <h1>Saska baza</h1>
+      </div>
+      <div class="summary" aria-label="Podsumowanie kryteri&#243;w">
+        <span>3-4 pokoje</span>
+        <span>min. 2 sypialnie</span>
+        <span>8-10k total</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="control-band" aria-label="Sterowanie list&#261;">
+        <div class="tabs" role="tablist" aria-label="Filtr priorytetu">
+          <button class="tab active" type="button" data-filter="all">Wszystkie</button>
+          <button class="tab" type="button" data-filter="call">Najpierw dzwoni&#263;</button>
+          <button class="tab" type="button" data-filter="verify">Do weryfikacji</button>
+        </div>
+        <label class="search">
+          <i data-lucide="search"></i>
+          <input id="searchInput" type="search" placeholder="Szukaj ulicy, plusu, ryzyka..." autocomplete="off" />
+        </label>
+      </section>
+
+      <section class="layout">
+        <div class="list-column">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Shortlist 29.06.2026</p>
+              <h2>Oferty</h2>
+            </div>
+            <button id="copyMessage" class="icon-text" type="button">
+              <i data-lucide="copy"></i>
+              <span>Kopiuj wiadomo&#347;&#263;</span>
+            </button>
+          </div>
+          <div id="cards" class="cards" aria-live="polite"></div>
+        </div>
+
+        <aside class="side-panel" aria-label="Mapa i alerty">
+          <div class="map-wrap">
+            <iframe
+              title="Mapa Saskiej K&#281;py"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=21.025%2C52.220%2C21.075%2C52.245&amp;layer=mapnik"
+              loading="lazy"
+            ></iframe>
+          </div>
+
+          <section class="panel-section">
+            <div class="section-head compact">
+              <h2>Alerty</h2>
+              <button id="copyAlerts" class="icon-button" type="button" aria-label="Kopiuj alerty">
+                <i data-lucide="clipboard-list"></i>
+              </button>
+            </div>
+            <div id="alerts" class="alerts"></div>
+          </section>
+
+          <section class="panel-section">
+            <h2>Odrzuca&#263;</h2>
+            <ul class="reject-list">
+              <li>brak windy powy&#380;ej parteru</li>
+              <li>parter bez ogr&#243;dka</li>
+              <li>mniej ni&#380; 55 m2</li>
+              <li>tylko 1 sypialnia</li>
+              <li>brak pralki lub zmywarki</li>
+              <li>total ponad 10k bez mocnego powodu</li>
+            </ul>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
