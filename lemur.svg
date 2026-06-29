@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Lemur icon</title>
+  <desc id="desc">A compact lemur face used as a Google Docs shortcut.</desc>
+  <circle cx="32" cy="33" r="22" fill="#f7f3ea"/>
+  <path d="M10 28c-2-8 1-17 8-22 6 6 7 13 3 21z" fill="#2c3137"/>
+  <path d="M54 28c2-8-1-17-8-22-6 6-7 13-3 21z" fill="#2c3137"/>
+  <path d="M19 10c4 5 5 10 2 16l-7-1c2-5 3-10 5-15z" fill="#ffffff"/>
+  <path d="M45 10c-4 5-5 10-2 16l7-1c-2-5-3-10-5-15z" fill="#ffffff"/>
+  <path d="M13 34c3-13 12-22 19-22s16 9 19 22c-4 13-12 18-19 18s-15-5-19-18z" fill="#eef0ed"/>
+  <path d="M18 35c2-9 8-15 14-15s12 6 14 15c-3 9-8 13-14 13s-11-4-14-13z" fill="#ffffff"/>
+  <ellipse cx="24" cy="33" rx="8" ry="9" fill="#252a30"/>
+  <ellipse cx="40" cy="33" rx="8" ry="9" fill="#252a30"/>
+  <circle cx="26" cy="32" r="3" fill="#ffffff"/>
+  <circle cx="38" cy="32" r="3" fill="#ffffff"/>
+  <path d="M29 40c1-2 5-2 6 0-1 2-5 2-6 0z" fill="#2c3137"/>
+  <path d="M23 46c5 4 13 4 18 0" fill="none" stroke="#2c3137" stroke-width="3" stroke-linecap="round"/>
+  <path d="M32 12v13" fill="none" stroke="#d7d1c3" stroke-width="4" stroke-linecap="round"/>
+</svg>
