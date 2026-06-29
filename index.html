@@ -21,14 +21,15 @@
           href="https://docs.google.com/document/d/1pOlBOhcK1Y642OfHTa4df7xQOtp2yT7P_B869OnvnvE/edit?tab=t.0"
           target="_blank"
           rel="noreferrer"
+          title="Google Docs"
           aria-label="Otw&#243;rz dokument w Google Docs"
         >
           <img src="./lemur.svg" alt="" aria-hidden="true" />
           <span>Google Docs</span>
         </a>
         <div class="summary" aria-label="Podsumowanie kryteri&#243;w">
+          <span id="countAll">0 ofert</span>
           <span>3-4 pokoje</span>
-          <span>min. 2 sypialnie</span>
           <span>8-10k total</span>
         </div>
       </div>
@@ -40,6 +41,8 @@
           <button class="tab active" type="button" data-filter="all">Wszystkie</button>
           <button class="tab" type="button" data-filter="call">Najpierw dzwoni&#263;</button>
           <button class="tab" type="button" data-filter="verify">Do weryfikacji</button>
+          <button class="tab" type="button" data-filter="from-brief">Z pierwszej karty</button>
+          <button class="tab" type="button" data-filter="reject">Odpada / benchmark</button>
         </div>
         <label class="search">
           <i data-lucide="search"></i>
@@ -52,28 +55,45 @@
           <div class="section-head">
             <div>
               <p class="eyebrow">Shortlist 29.06.2026</p>
-              <h2>Oferty</h2>
+              <h2>Tabela ofert</h2>
             </div>
             <button id="copyMessage" class="icon-text" type="button">
               <i data-lucide="copy"></i>
               <span>Kopiuj wiadomo&#347;&#263;</span>
             </button>
           </div>
-          <div id="cards" class="cards" aria-live="polite"></div>
+          <div class="table-shell" aria-live="polite">
+            <table class="offer-table">
+              <thead>
+                <tr>
+                  <th>Status</th>
+                  <th>Oferta</th>
+                  <th>Parametry</th>
+                  <th>Co jest na tak</th>
+                  <th>Co jest na nie / do sprawdzenia</th>
+                  <th>Link</th>
+                </tr>
+              </thead>
+              <tbody id="offersBody"></tbody>
+            </table>
+            <div id="emptyState" class="empty-state" hidden>Brak wynik&#243;w dla tego filtra.</div>
+          </div>
         </div>
 
         <aside class="side-panel" aria-label="Mapa i alerty">
-          <div class="map-wrap">
-            <iframe
-              title="Mapa Saskiej K&#281;py"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=21.025%2C52.220%2C21.075%2C52.245&amp;layer=mapnik"
-              loading="lazy"
-            ></iframe>
-          </div>
+          <section class="panel-section">
+            <div class="section-head compact">
+              <h2>Pytania do telefonu</h2>
+              <button id="copyQuestions" class="icon-button" type="button" aria-label="Kopiuj pytania">
+                <i data-lucide="copy"></i>
+              </button>
+            </div>
+            <ol id="questions" class="question-list"></ol>
+          </section>
 
           <section class="panel-section">
             <div class="section-head compact">
-              <h2>Alerty</h2>
+              <h2>Alerty wyszukiwania</h2>
               <button id="copyAlerts" class="icon-button" type="button" aria-label="Kopiuj alerty">
                 <i data-lucide="clipboard-list"></i>
               </button>

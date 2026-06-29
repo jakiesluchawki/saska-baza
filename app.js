@@ -1,203 +1,421 @@
 const offers = [
   {
-    id: "miedzynarodowa-50a",
-    priority: "call",
-    title: "Mi\u0119dzynarodowa 50A",
-    area: "80 m2",
-    rooms: "3 pokoje",
-    route: "ok. 20 min",
-    cost: "ok. 7390 total",
-    url: "https://gethome.pl/oferta/wynajme-mieszkanie-warszawa-ul-miedzynarodowa-80m2-trzypokojowe-6-pietro-z-2004-roku-2291884/",
-    pluses: [
-      "2 sypialnie, 6/8, dwa balkony",
-      "gara\u017c, prysznic, osobna toaleta",
-      "najlepszy stosunek metra\u017c / koszt",
+    id: "zwyciezcow-28",
+    status: "call",
+    fromBrief: true,
+    title: "Zwyciezcow 28",
+    source: "z pierwszej karty + doprecyzowane",
+    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-saska-kepa-zwyciezcow-76m2/156548047",
+    facts: ["76 m2", "3 pokoje", "5/6, winda", "4900 + 1200 + media", "parking 600", "ok. 11 min"],
+    pros: [
+      "Wraca do gry: ogloszenie podaje dwa ustawne pokoje oprocz salonu.",
+      "Winda, balkon, internet, panoramiczny widok i sensowny koszt.",
+      "Blisko i w budzecie nawet z parkingiem.",
     ],
-    risks: ["potwierdzi\u0107 wind\u0119, internet, kanap\u0119 do spania i pe\u0142ne umeblowanie"],
+    cons: [
+      "Pierwsza karta miala dobra watpliwosc: trzeba zobaczyc realny uklad drugiej sypialni.",
+      "Malo zdjec, wiec telefon i prosba o plan mieszkania.",
+    ],
   },
   {
-    id: "jana-styki",
-    priority: "call",
-    title: "Jana Styki",
-    area: "77 m2",
-    rooms: "3 pokoje",
-    route: "ok. 9 min",
-    cost: "ok. 8900+ total",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-jana-styki/ob/47432865",
-    pluses: [
-      "parter z ogrodem i tarasem",
-      "2 sypialnie, 2 miejsca postojowe",
-      "pies akceptowany, bardzo blisko punktu odniesienia",
+    id: "walecznych-39-96",
+    status: "call",
+    fromBrief: false,
+    title: "Walecznych 39 / 96 m2",
+    source: "nowy trop",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-walecznych/ob/47282923",
+    facts: ["96 m2", "3 pokoje", "garaz, balkon", "6700 + 2500 czynsz", "ok. 8 min"],
+    pros: [
+      "Dwie sypialnie, duzy metraz i lokalizacja blisko idealu.",
+      "Garaz, balkon i standard wygladajacy na gorny pulap budzetu.",
     ],
-    risks: ["parter musi by\u0107 realnie przyjemny i prywatny"],
+    cons: [
+      "Potwierdzic winde, pelne umeblowanie i czy koszt mediow nie wypycha ponad 10k.",
+      "Jesli meble sa tylko na zyczenie, trzeba to domknac przed ogladaniem.",
+    ],
+  },
+  {
+    id: "jana-styki-77",
+    status: "call",
+    fromBrief: false,
+    title: "Jana Styki / 77 m2",
+    source: "nowy trop",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-jana-styki/ob/47432865",
+    facts: ["77 m2", "3 pokoje", "parter z ogrodem", "7500 + 1400 + prad", "ok. 9 min"],
+    pros: [
+      "Parter spelnia warunek, bo jest ogrod i taras.",
+      "Dwie sypialnie, dwa miejsca postojowe, pies akceptowany.",
+      "Bardzo dobry dystans.",
+    ],
+    cons: [
+      "Parter trzeba obejrzec pod katem prywatnosci, swiatla i halasu.",
+      "Dopytac o internet i kompletne wyposazenie salonu.",
+    ],
+  },
+  {
+    id: "meksykanska-83",
+    status: "call",
+    fromBrief: false,
+    title: "Meksykanska / 83 m2",
+    source: "nowy trop",
+    url: "https://warszawa.nieruchomosci-online.pl/mieszkanie%2Cz-aneksem-kuchennym/25911563.html",
+    facts: ["83 m2", "3 pokoje", "6/8, winda", "6600 + 1100 + media", "garaz 300"],
+    pros: [
+      "Bardzo mocny zestaw: winda, balkon, garaz, wysoki poziom i metraz 70+.",
+      "Opis wskazuje dwie sypialnie oraz pelne wyposazenie.",
+    ],
+    cons: [
+      "Ogloszenie wyglada na starsze, wiec pierwsze pytanie to aktualnosc.",
+      "Potwierdzic psa i pelny miesieczny total.",
+    ],
+  },
+  {
+    id: "saska-70-dwa-balkony",
+    status: "call",
+    fromBrief: false,
+    title: "Saska Kepa / 70 m2, dwa balkony",
+    source: "nowy trop",
+    url: "https://www.olx.pl/d/oferta/saska-kepa-garaz-dwa-balkony-70m2-CID3-ID15g4Rl.html",
+    facts: ["70 m2", "3 pokoje", "3. pietro, winda", "5300 + 1400 + prad", "miejsce 300"],
+    pros: [
+      "Dwa balkony, winda, garaz, zwierzeta dozwolone i koszt ponizej 8k.",
+      "Dobre dopasowanie do nice-to-have, jesli adres jest wlasciwy.",
+    ],
+    cons: [
+      "Brak ulicy w ogloszeniu, wiec trzeba potwierdzic dokladny spacer.",
+      "Sprawdzic, czy sa realne dwie sypialnie i kanapa do spania.",
+    ],
+  },
+  {
+    id: "miedzynarodowa-50a",
+    status: "call",
+    fromBrief: false,
+    title: "Miedzynarodowa 50A / 80 m2",
+    source: "nowy trop",
+    url: "https://gethome.pl/oferta/wynajme-mieszkanie-warszawa-ul-miedzynarodowa-80m2-trzypokojowe-6-pietro-z-2004-roku-2291884/",
+    facts: ["80 m2", "3 pokoje", "6/8", "5290 + 1500 + 200", "garaz 400", "ok. 20 min"],
+    pros: [
+      "Dwie sypialnie, dwa balkony, osobna toaleta, prysznic i garaz.",
+      "Najlepszy stosunek metraz / koszt z dotychczasowych tropow.",
+    ],
+    cons: [
+      "Dystans jest na granicy awaryjnego maksimum.",
+      "Potwierdzic winde, internet i minimalne umeblowanie salonu.",
+    ],
   },
   {
     id: "saska-74",
-    priority: "call",
-    title: "Saska",
-    area: "74 m2",
-    rooms: "3 pokoje",
-    route: "ok. 12-16 min",
-    cost: "ok. 7500+ total",
+    status: "call",
+    fromBrief: false,
+    title: "Saska / 74 m2",
+    source: "nowy trop",
     url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-saska-kepa-saska-74m2/156501275",
-    pluses: [
-      "2 sypialnie, miejsce parkingowe",
-      "budynek 2010, sensowny koszt",
-      "dobry kandydat do szybkiego telefonu",
+    facts: ["74 m2", "3 pokoje", "1/5", "6000 + 1500 + prad", "parking", "ok. 12 min"],
+    pros: [
+      "Dwie sypialnie, parking i budynek z 2010 roku.",
+      "Cena jeszcze miesci sie w logice 8-10k.",
     ],
-    risks: ["potwierdzi\u0107 wind\u0119, umeblowanie i internet"],
+    cons: [
+      "Winda, internet, pralka/zmywarka i widok wymagaja potwierdzenia.",
+      "Pierwsze pietro bez windy byloby odrzutem.",
+    ],
   },
   {
-    id: "apartament-96",
-    priority: "verify",
-    title: "Apartament 96 m2",
-    area: "96 m2",
-    rooms: "3 pokoje",
-    route: "brak adresu",
-    cost: "ok. 9100+ total",
-    url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-96m2-mzn2047605868",
-    pluses: [
-      "2 sypialnie, winda, gara\u017c",
-      "balkon, meble na \u017cyczenie",
-      "du\u017cy metra\u017c w bud\u017cecie 10k",
+    id: "londynska-89",
+    status: "verify",
+    fromBrief: false,
+    title: "Londynska / 89 m2",
+    source: "nowy trop",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-londynska/ob/47463491",
+    facts: ["89 m2", "3 pokoje", "parter z ogrodem", "7700 + oplaty?", "ok. 16 min"],
+    pros: [
+      "Parter ma ogrod i taras, wiec formalnie przechodzi warunek.",
+      "Duzy metraz, parking naziemny i spokojniejszy wariant.",
     ],
-    risks: ["bez dok\u0142adnego adresu nie da si\u0119 oceni\u0107 20 minut pieszo"],
+    cons: [
+      "Trzeba potwierdzic pelny total, umeblowanie i czy to na pewno mieszkanie rodzinne, nie biurowy klimat.",
+      "Parter do oceny pod katem prywatnosci.",
+    ],
   },
   {
     id: "lizbonska-70",
-    priority: "verify",
-    title: "Lizbo\u0144ska",
-    area: "70 m2",
-    rooms: "3 pokoje",
-    route: "raczej 20+ min",
-    cost: "czynsz do sprawdzenia",
+    status: "verify",
+    fromBrief: false,
+    title: "Lizbonska / 70 m2",
+    source: "nowy trop",
     url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-lizbonska-70m2-mzn2047643254",
-    pluses: [
-      "3/5, winda, balkon",
-      "gara\u017c, umeblowane",
-      "awaryjnie mo\u017ce by\u0107 dobrym standardem",
+    facts: ["70 m2", "3 pokoje", "winda", "balkon", "garaz", "raczej 20+ min"],
+    pros: [
+      "Winda, balkon, garaz i standard wygladaja dobrze.",
+      "Metraz lapie wazne nice-to-have.",
     ],
-    risks: ["trasa prawdopodobnie poza komfortowym limitem i trzeba zna\u0107 total"],
+    cons: [
+      "Dystans prawdopodobnie wychodzi poza komfortowy limit.",
+      "Pelny koszt i dokladny adres trzeba potwierdzic przed czasem na ogledziny.",
+    ],
+  },
+  {
+    id: "miedzynarodowa-55",
+    status: "verify",
+    fromBrief: false,
+    title: "Miedzynarodowa / 55 m2",
+    source: "nowy trop",
+    url: "https://znajdznajem.pl/warszawa/oferta/253609-mieszkanie-3-pokoje-praga-poludnie",
+    facts: ["55 m2", "3 pokoje", "6/10", "3600 + oplaty?", "ok. 20 min"],
+    pros: [
+      "Tani wariant awaryjny, minimalny metraz i widok na zielen.",
+      "Wysokie pietro powinno oznaczac winde, ale trzeba to potwierdzic.",
+    ],
+    cons: [
+      "55 m2 to absolutne minimum, a opis sugeruje podzial scianka.",
+      "Sprawdzic, czy sa dwie prawdziwe sypialnie i czy oferta nadal zyje.",
+    ],
+  },
+  {
+    id: "paryska-56",
+    status: "verify",
+    fromBrief: false,
+    title: "Paryska / 56 m2",
+    source: "nowy trop",
+    url: "https://www.nestoria.pl/detail/0000000030868192299291514/title/5/1-6",
+    facts: ["56 m2", "3 pokoje", "5. pietro, winda", "4900 + oplaty?", "ok. 14 min"],
+    pros: [
+      "Bardzo blisko minimum, dobra lokalizacja i niska cena.",
+      "Winda oraz balkon sa w opisie agregatora.",
+    ],
+    cons: [
+      "Agregator: trzeba dojsc do pierwotnego ogloszenia.",
+      "Potwierdzic dwie sypialnie, wyposazenie i realny total.",
+    ],
+  },
+  {
+    id: "walecznych-90",
+    status: "verify",
+    fromBrief: false,
+    title: "Walecznych / 90 m2",
+    source: "nowy trop",
+    url: "https://www.nestoria.pl/detail/0000000030220270580049847/title/5/1-8",
+    facts: ["90 m2", "3 pokoje", "7000 + oplaty?", "bardzo blisko"],
+    pros: [
+      "Lokalizacja i metraz sa na papierze bardzo mocne.",
+      "Warto wykonac jeden telefon, jesli kontakt da sie znalezc.",
+    ],
+    cons: [
+      "Brak jasnej windy, pietra i wyposazenia w dostepnym opisie.",
+      "Jesli nie ma windy albo parteru z ogrodem, od razu odpada.",
+    ],
+  },
+  {
+    id: "francuska-klimatyczne",
+    status: "reject",
+    fromBrief: true,
+    title: "Francuska / klimatyczne 3 pokoje",
+    source: "z pierwszej karty",
+    url: "https://www.otodom.pl/pl/oferta/klimatyczne-trzypokojowe-przy-francuskiej-ID4BDhJ",
+    facts: ["3 pokoje", "lokalizacja OK", "z pierwszej karty"],
+    pros: ["Adresowo kuszace, bo Francuska jest w samym obszarze poszukiwan."],
+    cons: ["Bez windy, zero mebli i bez prysznica. Must-have fail, nie tracic czasu."],
+  },
+  {
+    id: "walecznych-39-65",
+    status: "reject",
+    fromBrief: true,
+    title: "Walecznych 39 / 65 m2",
+    source: "z pierwszej karty",
+    url: "https://www.otodom.pl/pl/oferta/saska-kepa-walecznych-39-3pok-65m2-wynajem-ID4BKEx",
+    facts: ["65 m2", "3 pokoje", "parter", "lokalizacja idealna"],
+    pros: ["Lokalizacja prawie idealna i metraz formalnie przechodzi minimum."],
+    cons: ["Parter bez potwierdzonego ogrodu odpada. Do tego slaby standard wedlug pierwszej oceny."],
+  },
+  {
+    id: "walecznych-3p",
+    status: "reject",
+    fromBrief: true,
+    title: "Walecznych / 3 pokoje",
+    source: "z pierwszej karty",
+    url: "https://www.otodom.pl/pl/oferta/3-pokoje-saska-kepa-walecznych-ID4kPFr",
+    facts: ["3 pokoje", "z pierwszej karty"],
+    pros: ["Ulica bardzo dobra, wiec link zostaje jako punkt odniesienia."],
+    cons: ["Bez windy i slaby standard. Przy kryteriach autora to odrzut."],
+  },
+  {
+    id: "meksykanska-85-brief",
+    status: "verify",
+    fromBrief: true,
+    title: "Meksykanska / 85 m2",
+    source: "z pierwszej karty",
+    url: "https://www.otodom.pl/pl/oferta/mieszkanie-85m-saska-kepa-warszawa-ID4nsXb",
+    facts: ["85 m2", "3 pokoje", "z pierwszej karty"],
+    pros: ["Metraz i lokalizacja sa potencjalnie dobre."],
+    cons: ["Pierwsza ocena: ciasny, malo przyjemny klimat. Sprawdzic tylko, jesli ma winde, dwie sypialnie i sensowne swiatlo."],
+  },
+  {
+    id: "saska-3p-brief",
+    status: "reject",
+    fromBrief: true,
+    title: "Saska / 3 pokoje",
+    source: "z pierwszej karty",
+    url: "https://www.otodom.pl/pl/oferta/saska-3-pokoje-ID4Bs57",
+    facts: ["3 pokoje", "z pierwszej karty"],
+    pros: ["Adres w dobrym obszarze."],
+    cons: ["Bez windy, wiec odpada przy kryteriach autora."],
+  },
+  {
+    id: "nowoczesne-overbudget",
+    status: "benchmark",
+    fromBrief: true,
+    title: "Nowoczesne na Saskiej Kepie",
+    source: "z pierwszej karty",
+    url: "https://www.otodom.pl/pl/oferta/nowoczesne-mieszkanie-na-saskiej-kepie-ID4BkR6",
+    facts: ["bardzo dobry standard", "ponad budzet"],
+    pros: ["Dobry wzorzec standardu: tak ma wygladac mieszkanie warte rozmowy o 10k."],
+    cons: ["Over budget. Tylko benchmark albo negocjacja, nie normalny kandydat."],
+  },
+  {
+    id: "zwyciezcow-176",
+    status: "benchmark",
+    fromBrief: true,
+    title: "Zwyciezcow / 176 m2",
+    source: "z pierwszej karty",
+    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-warszawa-praga-poludnie-saska-kepa-zwyciezcow-176m2/156546679",
+    facts: ["176 m2", "idealny kierunek", "za drogo"],
+    pros: ["Wzorzec ukladu i jakosci, gdyby budzet nie istnial."],
+    cons: ["Za drogo i za duze. Zostawione tylko jako punkt porownania."],
   },
 ];
 
 const alerts = [
-  "Saska K\u0119pa 3 pokoje winda 70",
-  "Jana Styki wynajem 3 pokoje",
-  "Saska wynajem 3 pokoje parking",
-  "Meksyka\u0144ska 3 pokoje winda",
-  "Mi\u0119dzynarodowa 3 pokoje gara\u017c",
-  "Kr\u00f3lowej Aldony 3 pokoje wynajem",
-  "Walecznych 3 pokoje parter ogr\u00f3d",
+  "Saska Kepa 3 pokoje winda 70 m2 wynajem",
+  "Zwyciezcow 28 Saska Kepa 3 pokoje winda",
+  "Walecznych 3 pokoje garaz winda wynajem",
+  "Jana Styki 3 pokoje ogrod wynajem",
+  "Meksykanska 3 pokoje winda garaz wynajem",
+  "Miedzynarodowa 3 pokoje balkon garaz",
+  "Londynska 3 pokoje ogrod Saska Kepa",
+];
+
+const questions = [
+  "Jaki jest pelny miesieczny koszt: najem, czynsz administracyjny, media, parking, internet i kaucja?",
+  "Czy jest winda? Jesli parter, czy jest prywatny ogrod i czy widok nie jest w sciane?",
+  "Czy sa dwie normalne sypialnie oraz kanapa do spania w salonie?",
+  "Czy w kuchni jest plyta, piekarnik i zmywarka, a w lazience pralka?",
+  "Czy mozna wynajac z psem i obejrzec mieszkanie w tym tygodniu?",
 ];
 
 const message = [
-  "Dzie\u0144 dobry, czy mieszkanie jest nadal dost\u0119pne?",
-  "Szukamy 3-4 pokoi dla rodziny, minimum 2 sypialnie, wynajem najch\u0119tniej od ko\u0144ca wakacji.",
-  "Czy mog\u0105 Pa\u0144stwo potwierdzi\u0107: pe\u0142ny miesi\u0119czny koszt z czynszem i mediami, wind\u0119 albo parter z ogr\u00f3dkiem, internet, wyposa\u017cenie salonu (zw\u0142aszcza kanapa do spania) i sypialni, zgod\u0119 na psa oraz czy da si\u0119 obejrze\u0107 lokal w tym tygodniu?",
+  "Dzien dobry, czy mieszkanie jest nadal dostepne?",
+  "Szukamy 3-4 pokoi, minimum 2 sypialnie, w okolicy Saskiej Kepy, z pelnym kosztem do ok. 8-10 tys. miesiecznie.",
+  "Czy moga Panstwo potwierdzic: pelny miesieczny koszt, winde albo parter z ogrodem, dwie sypialnie, wyposazenie kuchni i lazienki, internet, zgode na psa oraz termin ogladania?",
 ].join(" ");
 
-const stateKey = "saska-baza-status-v1";
-const cards = document.querySelector("#cards");
+const offersBody = document.querySelector("#offersBody");
+const emptyState = document.querySelector("#emptyState");
 const searchInput = document.querySelector("#searchInput");
 const toast = document.querySelector("#toast");
 const tabs = Array.from(document.querySelectorAll(".tab"));
 let activeFilter = "all";
 
-function readStatus() {
-  try {
-    return JSON.parse(localStorage.getItem(stateKey)) || {};
-  } catch {
-    return {};
-  }
+function escapeHTML(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
 }
 
-function writeStatus(status) {
-  localStorage.setItem(stateKey, JSON.stringify(status));
+function statusLabel(status) {
+  const labels = {
+    call: "Dzwonic",
+    verify: "Sprawdzic",
+    reject: "Odpada",
+    benchmark: "Benchmark",
+  };
+  return labels[status] || status;
 }
 
-function offerText(offer) {
-  return [
-    offer.title,
-    offer.area,
-    offer.rooms,
-    offer.route,
-    offer.cost,
-    ...offer.pluses,
-    ...offer.risks,
-  ]
-    .join(" ")
-    .toLowerCase();
-}
-
-function priorityLabel(priority) {
-  return priority === "call" ? "Najpierw dzwoni\u0107" : "Do weryfikacji";
+function statusIcon(status) {
+  const icons = {
+    call: "phone-call",
+    verify: "search-check",
+    reject: "x-circle",
+    benchmark: "ruler",
+  };
+  return icons[status] || "circle";
 }
 
 function icon(name) {
   return `<i data-lucide="${name}"></i>`;
 }
 
-function statusButton(offerId, key, label, iconName, extraClass = "") {
-  const status = readStatus();
-  const active = Boolean(status[offerId]?.[key]);
+function offerText(offer) {
+  return [
+    offer.title,
+    offer.source,
+    offer.status,
+    ...offer.facts,
+    ...offer.pros,
+    ...offer.cons,
+  ]
+    .join(" ")
+    .toLowerCase();
+}
+
+function filterOffer(offer) {
+  if (activeFilter === "all") return true;
+  if (activeFilter === "from-brief") return offer.fromBrief;
+  if (activeFilter === "reject") return offer.status === "reject" || offer.status === "benchmark";
+  return offer.status === activeFilter;
+}
+
+function renderList(items, type) {
   return `
-    <button class="status-button ${extraClass} ${active ? "active" : ""}" type="button" data-status="${key}" data-offer="${offerId}">
-      ${icon(iconName)}
-      <span>${label}</span>
-    </button>
+    <ul class="argument-list ${type}">
+      ${items.map((item) => `<li>${escapeHTML(item)}</li>`).join("")}
+    </ul>
   `;
 }
 
-function renderCards() {
-  const query = searchInput.value.trim().toLowerCase();
-  const visible = offers.filter((offer) => {
-    const filterMatch = activeFilter === "all" || offer.priority === activeFilter;
-    const searchMatch = !query || offerText(offer).includes(query);
-    return filterMatch && searchMatch;
-  });
+function renderFacts(facts) {
+  return facts.map((fact) => `<span class="fact">${escapeHTML(fact)}</span>`).join("");
+}
 
-  cards.innerHTML = visible
+function renderOffers() {
+  const query = searchInput.value.trim().toLowerCase();
+  const visible = offers.filter((offer) => filterOffer(offer) && (!query || offerText(offer).includes(query)));
+
+  offersBody.innerHTML = visible
     .map(
       (offer) => `
-        <article class="card">
-          <div class="card-main">
-            <div class="card-top">
-              <div>
-                <h3>${offer.title}</h3>
-                <div class="meta">
-                  <span class="tag">${offer.area}</span>
-                  <span class="tag">${offer.rooms}</span>
-                  <span class="tag">${offer.route}</span>
-                  <span class="cost-pill">${offer.cost}</span>
-                </div>
-              </div>
-              <span class="priority ${offer.priority}">${priorityLabel(offer.priority)}</span>
-            </div>
-            <ul class="notes">
-              ${offer.pluses.map((note) => `<li>${icon("check-circle-2")}<span>${note}</span></li>`).join("")}
-              ${offer.risks.map((note) => `<li class="risk">${icon("alert-triangle")}<span>${note}</span></li>`).join("")}
-            </ul>
-          </div>
-          <div class="card-actions">
+        <tr class="offer-row ${offer.status}">
+          <td data-label="Status">
+            <span class="status-chip ${offer.status}">${icon(statusIcon(offer.status))}${statusLabel(offer.status)}</span>
+            <span class="source-chip">${escapeHTML(offer.source)}</span>
+          </td>
+          <td data-label="Oferta">
+            <a class="offer-title" href="${offer.url}" target="_blank" rel="noreferrer">${escapeHTML(offer.title)}</a>
+          </td>
+          <td data-label="Parametry">
+            <div class="facts">${renderFacts(offer.facts)}</div>
+          </td>
+          <td data-label="Co jest na tak">
+            ${renderList(offer.pros, "pros")}
+          </td>
+          <td data-label="Co jest na nie / do sprawdzenia">
+            ${renderList(offer.cons, "cons")}
+          </td>
+          <td data-label="Link">
             <a class="open-link" href="${offer.url}" target="_blank" rel="noreferrer">
               ${icon("external-link")}
-              <span>Otw\u00f3rz</span>
+              <span>Otworz</span>
             </a>
-            ${statusButton(offer.id, "called", "Telefon", "phone")}
-            ${statusButton(offer.id, "seen", "Obejrzane", "eye")}
-            ${statusButton(offer.id, "favorite", "Mocne", "star")}
-            ${statusButton(offer.id, "rejected", "Odpada", "x-circle", "reject")}
-          </div>
-        </article>
+          </td>
+        </tr>
       `
     )
     .join("");
 
-  if (!visible.length) {
-    cards.innerHTML = `<div class="panel-section"><h2>Brak wynik\u00f3w</h2></div>`;
-  }
-
+  emptyState.hidden = Boolean(visible.length);
   window.lucide?.createIcons();
 }
 
@@ -207,12 +425,16 @@ function renderAlerts() {
       const url = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
       return `
         <a class="alert-link" href="${url}" target="_blank" rel="noreferrer">
-          <span>${query}</span>
+          <span>${escapeHTML(query)}</span>
           ${icon("external-link")}
         </a>
       `;
     })
     .join("");
+}
+
+function renderQuestions() {
+  document.querySelector("#questions").innerHTML = questions.map((question) => `<li>${escapeHTML(question)}</li>`).join("");
 }
 
 function showToast(text) {
@@ -222,41 +444,38 @@ function showToast(text) {
 }
 
 async function copyText(text, doneText) {
-  await navigator.clipboard.writeText(text);
-  showToast(doneText);
+  try {
+    await navigator.clipboard.writeText(text);
+    showToast(doneText);
+  } catch {
+    showToast("Nie udalo sie skopiowac");
+  }
 }
 
 document.addEventListener("click", (event) => {
   const tab = event.target.closest(".tab");
-  if (tab) {
-    activeFilter = tab.dataset.filter;
-    tabs.forEach((item) => item.classList.toggle("active", item === tab));
-    renderCards();
-    return;
-  }
-
-  const statusButtonEl = event.target.closest("[data-status]");
-  if (statusButtonEl) {
-    const status = readStatus();
-    const offerId = statusButtonEl.dataset.offer;
-    const key = statusButtonEl.dataset.status;
-    status[offerId] = status[offerId] || {};
-    status[offerId][key] = !status[offerId][key];
-    writeStatus(status);
-    renderCards();
-  }
+  if (!tab) return;
+  activeFilter = tab.dataset.filter;
+  tabs.forEach((item) => item.classList.toggle("active", item === tab));
+  renderOffers();
 });
 
-searchInput.addEventListener("input", renderCards);
+searchInput.addEventListener("input", renderOffers);
 
 document.querySelector("#copyMessage").addEventListener("click", () => {
-  copyText(message, "Wiadomo\u015b\u0107 skopiowana");
+  copyText(message, "Wiadomosc skopiowana");
+});
+
+document.querySelector("#copyQuestions").addEventListener("click", () => {
+  copyText(questions.join("\n"), "Pytania skopiowane");
 });
 
 document.querySelector("#copyAlerts").addEventListener("click", () => {
   copyText(alerts.join("\n"), "Alerty skopiowane");
 });
 
+document.querySelector("#countAll").textContent = `${offers.length} pozycji`;
 renderAlerts();
-renderCards();
+renderQuestions();
+renderOffers();
 window.lucide?.createIcons();
