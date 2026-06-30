@@ -57,10 +57,16 @@
               <p class="eyebrow">Shortlist 29.06.2026</p>
               <h2>Tabela ofert</h2>
             </div>
-            <button id="copyMessage" class="icon-text" type="button">
-              <i data-lucide="copy"></i>
-              <span>Kopiuj wiadomo&#347;&#263;</span>
-            </button>
+            <div class="section-actions">
+              <button id="restoreHidden" class="icon-text" type="button">
+                <i data-lucide="rotate-ccw"></i>
+                <span>Przywr&#243;&#263; ukryte</span>
+              </button>
+              <button id="copyMessage" class="icon-text" type="button">
+                <i data-lucide="copy"></i>
+                <span>Kopiuj wiadomo&#347;&#263;</span>
+              </button>
+            </div>
           </div>
           <div class="table-shell" aria-live="polite">
             <table class="offer-table">
@@ -71,7 +77,7 @@
                   <th>Parametry</th>
                   <th>Co jest na tak</th>
                   <th>Co jest na nie / do sprawdzenia</th>
-                  <th>Link</th>
+                  <th>Akcje</th>
                 </tr>
               </thead>
               <tbody id="offersBody"></tbody>

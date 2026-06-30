@@ -1,3 +1,5 @@
+// Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
+// @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const offers = [
   {
     id: "zwyciezcow-28",
@@ -172,40 +174,6 @@ const offers = [
     ],
   },
   {
-    id: "paryska-56",
-    status: "verify",
-    fromBrief: false,
-    title: "Paryska / 56 m2",
-    source: "nowy trop",
-    url: "https://www.nestoria.pl/detail/0000000030868192299291514/title/5/1-6",
-    facts: ["56 m2", "3 pokoje", "5. pietro, winda", "4900 + oplaty?", "ok. 14 min"],
-    pros: [
-      "Bardzo blisko minimum, dobra lokalizacja i niska cena.",
-      "Winda oraz balkon sa w opisie agregatora.",
-    ],
-    cons: [
-      "Agregator: trzeba dojsc do pierwotnego ogloszenia.",
-      "Potwierdzic dwie sypialnie, wyposazenie i realny total.",
-    ],
-  },
-  {
-    id: "walecznych-90",
-    status: "verify",
-    fromBrief: false,
-    title: "Walecznych / 90 m2",
-    source: "nowy trop",
-    url: "https://www.nestoria.pl/detail/0000000030220270580049847/title/5/1-8",
-    facts: ["90 m2", "3 pokoje", "7000 + oplaty?", "bardzo blisko"],
-    pros: [
-      "Lokalizacja i metraz sa na papierze bardzo mocne.",
-      "Warto wykonac jeden telefon, jesli kontakt da sie znalezc.",
-    ],
-    cons: [
-      "Brak jasnej windy, pietra i wyposazenia w dostepnym opisie.",
-      "Jesli nie ma windy albo parteru z ogrodem, od razu odpada.",
-    ],
-  },
-  {
     id: "francuska-klimatyczne",
     status: "reject",
     fromBrief: true,
@@ -312,8 +280,12 @@ const offersBody = document.querySelector("#offersBody");
 const emptyState = document.querySelector("#emptyState");
 const searchInput = document.querySelector("#searchInput");
 const toast = document.querySelector("#toast");
+const restoreHiddenButton = document.querySelector("#restoreHidden");
+const countAll = document.querySelector("#countAll");
 const tabs = Array.from(document.querySelectorAll(".tab"));
+const hiddenOffersKey = "saska-baza-hidden-offers";
 let activeFilter = "all";
+let hiddenOfferIds = readHiddenOffers();
 
 function escapeHTML(value) {
   return String(value)
@@ -361,6 +333,24 @@ function offerText(offer) {
     .toLowerCase();
 }
 
+function readHiddenOffers() {
+  try {
+    const parsed = JSON.parse(window.localStorage.getItem(hiddenOffersKey) || "[]");
+    return new Set(Array.isArray(parsed) ? parsed.filter((id) => typeof id === "string") : []);
+  } catch {
+    return new Set();
+  }
+}
+
+function saveHiddenOffers() {
+  try {
+    window.localStorage.setItem(hiddenOffersKey, JSON.stringify(Array.from(hiddenOfferIds)));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 function filterOffer(offer) {
   if (activeFilter === "all") return true;
   if (activeFilter === "from-brief") return offer.fromBrief;
@@ -380,9 +370,17 @@ function renderFacts(facts) {
   return facts.map((fact) => `<span class="fact">${escapeHTML(fact)}</span>`).join("");
 }
 
+function renderSummary() {
+  const activeOffersCount = offers.filter((offer) => !hiddenOfferIds.has(offer.id)).length;
+  countAll.textContent = `${activeOffersCount} / ${offers.length} pozycji`;
+  restoreHiddenButton.disabled = hiddenOfferIds.size === 0;
+}
+
 function renderOffers() {
   const query = searchInput.value.trim().toLowerCase();
-  const visible = offers.filter((offer) => filterOffer(offer) && (!query || offerText(offer).includes(query)));
+  const visible = offers.filter(
+    (offer) => !hiddenOfferIds.has(offer.id) && filterOffer(offer) && (!query || offerText(offer).includes(query))
+  );
 
   offersBody.innerHTML = visible
     .map(
@@ -404,11 +402,17 @@ function renderOffers() {
           <td data-label="Co jest na nie / do sprawdzenia">
             ${renderList(offer.cons, "cons")}
           </td>
-          <td data-label="Link">
-            <a class="open-link" href="${offer.url}" target="_blank" rel="noreferrer">
-              ${icon("external-link")}
-              <span>Otworz</span>
-            </a>
+          <td data-label="Akcje">
+            <div class="table-actions">
+              <a class="open-link" href="${offer.url}" target="_blank" rel="noreferrer">
+                ${icon("external-link")}
+                <span>Otworz</span>
+              </a>
+              <button class="hide-offer" type="button" data-hide-offer="${escapeHTML(offer.id)}">
+                ${icon("eye-off")}
+                <span>Ukryj</span>
+              </button>
+            </div>
           </td>
         </tr>
       `
@@ -416,6 +420,7 @@ function renderOffers() {
     .join("");
 
   emptyState.hidden = Boolean(visible.length);
+  renderSummary();
   window.lucide?.createIcons();
 }
 
@@ -453,6 +458,15 @@ async function copyText(text, doneText) {
 }
 
 document.addEventListener("click", (event) => {
+  const hideButton = event.target.closest("[data-hide-offer]");
+  if (hideButton) {
+    hiddenOfferIds.add(hideButton.dataset.hideOffer);
+    const saved = saveHiddenOffers();
+    renderOffers();
+    showToast(saved ? "Oferta ukryta" : "Oferta ukryta na czas tej sesji");
+    return;
+  }
+
   const tab = event.target.closest(".tab");
   if (!tab) return;
   activeFilter = tab.dataset.filter;
@@ -461,6 +475,17 @@ document.addEventListener("click", (event) => {
 });
 
 searchInput.addEventListener("input", renderOffers);
+
+restoreHiddenButton.addEventListener("click", () => {
+  hiddenOfferIds = new Set();
+  try {
+    window.localStorage.removeItem(hiddenOffersKey);
+  } catch {
+    // Nothing else to clear; the in-memory list is already empty.
+  }
+  renderOffers();
+  showToast("Ukryte oferty przywrocone");
+});
 
 document.querySelector("#copyMessage").addEventListener("click", () => {
   copyText(message, "Wiadomosc skopiowana");
@@ -474,7 +499,6 @@ document.querySelector("#copyAlerts").addEventListener("click", () => {
   copyText(alerts.join("\n"), "Alerty skopiowane");
 });
 
-document.querySelector("#countAll").textContent = `${offers.length} pozycji`;
 renderAlerts();
 renderQuestions();
 renderOffers();
