@@ -20,23 +20,6 @@ const offers = [
     ],
   },
   {
-    id: "walecznych-39-96",
-    status: "call",
-    fromBrief: false,
-    title: "Walecznych 39 / 96 m2",
-    source: "nowy trop",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-walecznych/ob/47282923",
-    facts: ["96 m2", "3 pokoje", "garaz, balkon", "6700 + 2500 czynsz", "ok. 8 min"],
-    pros: [
-      "Dwie sypialnie, duzy metraz i lokalizacja blisko idealu.",
-      "Garaz, balkon i standard wygladajacy na gorny pulap budzetu.",
-    ],
-    cons: [
-      "Potwierdzic winde, pelne umeblowanie i czy koszt mediow nie wypycha ponad 10k.",
-      "Jesli meble sa tylko na zyczenie, trzeba to domknac przed ogladaniem.",
-    ],
-  },
-  {
     id: "jana-styki-77",
     status: "call",
     fromBrief: false,
@@ -52,40 +35,6 @@ const offers = [
     cons: [
       "Parter trzeba obejrzec pod katem prywatnosci, swiatla i halasu.",
       "Dopytac o internet i kompletne wyposazenie salonu.",
-    ],
-  },
-  {
-    id: "meksykanska-83",
-    status: "call",
-    fromBrief: false,
-    title: "Meksykanska / 83 m2",
-    source: "nowy trop",
-    url: "https://warszawa.nieruchomosci-online.pl/mieszkanie%2Cz-aneksem-kuchennym/25911563.html",
-    facts: ["83 m2", "3 pokoje", "6/8, winda", "6600 + 1100 + media", "garaz 300"],
-    pros: [
-      "Bardzo mocny zestaw: winda, balkon, garaz, wysoki poziom i metraz 70+.",
-      "Opis wskazuje dwie sypialnie oraz pelne wyposazenie.",
-    ],
-    cons: [
-      "Ogloszenie wyglada na starsze, wiec pierwsze pytanie to aktualnosc.",
-      "Potwierdzic psa i pelny miesieczny total.",
-    ],
-  },
-  {
-    id: "saska-70-dwa-balkony",
-    status: "call",
-    fromBrief: false,
-    title: "Saska Kepa / 70 m2, dwa balkony",
-    source: "nowy trop",
-    url: "https://www.olx.pl/d/oferta/saska-kepa-garaz-dwa-balkony-70m2-CID3-ID15g4Rl.html",
-    facts: ["70 m2", "3 pokoje", "3. pietro, winda", "5300 + 1400 + prad", "miejsce 300"],
-    pros: [
-      "Dwa balkony, winda, garaz, zwierzeta dozwolone i koszt ponizej 8k.",
-      "Dobre dopasowanie do nice-to-have, jesli adres jest wlasciwy.",
-    ],
-    cons: [
-      "Brak ulicy w ogloszeniu, wiec trzeba potwierdzic dokladny spacer.",
-      "Sprawdzic, czy sa realne dwie sypialnie i kanapa do spania.",
     ],
   },
   {
@@ -154,23 +103,6 @@ const offers = [
     cons: [
       "Dystans prawdopodobnie wychodzi poza komfortowy limit.",
       "Pelny koszt i dokladny adres trzeba potwierdzic przed czasem na ogledziny.",
-    ],
-  },
-  {
-    id: "miedzynarodowa-55",
-    status: "verify",
-    fromBrief: false,
-    title: "Miedzynarodowa / 55 m2",
-    source: "nowy trop",
-    url: "https://znajdznajem.pl/warszawa/oferta/253609-mieszkanie-3-pokoje-praga-poludnie",
-    facts: ["55 m2", "3 pokoje", "6/10", "3600 + oplaty?", "ok. 20 min"],
-    pros: [
-      "Tani wariant awaryjny, minimalny metraz i widok na zielen.",
-      "Wysokie pietro powinno oznaczac winde, ale trzeba to potwierdzic.",
-    ],
-    cons: [
-      "55 m2 to absolutne minimum, a opis sugeruje podzial scianka.",
-      "Sprawdzic, czy sa dwie prawdziwe sypialnie i czy oferta nadal zyje.",
     ],
   },
   {
@@ -320,11 +252,28 @@ function icon(name) {
   return `<i data-lucide="${name}"></i>`;
 }
 
+function providerName(url) {
+  const host = new URL(url).hostname.replace(/^www\./, "");
+  const labels = {
+    "domiporta.pl": "Domiporta",
+    "gratka.pl": "Gratka",
+    "gethome.pl": "GetHome",
+    "morizon.pl": "Morizon",
+    "nestoria.pl": "Nestoria",
+    "nieruchomosci-online.pl": "Nieruchomosci-online",
+    "olx.pl": "OLX",
+    "otodom.pl": "Otodom",
+    "znajdznajem.pl": "ZnajdzNajem",
+  };
+  return labels[host] || host;
+}
+
 function offerText(offer) {
   return [
     offer.title,
     offer.source,
     offer.status,
+    providerName(offer.url),
     ...offer.facts,
     ...offer.pros,
     ...offer.cons,
@@ -388,10 +337,16 @@ function renderOffers() {
         <tr class="offer-row ${offer.status}">
           <td data-label="Status">
             <span class="status-chip ${offer.status}">${icon(statusIcon(offer.status))}${statusLabel(offer.status)}</span>
-            <span class="source-chip">${escapeHTML(offer.source)}</span>
+            <span class="source-chip">${escapeHTML(providerName(offer.url))}</span>
           </td>
           <td data-label="Oferta">
             <a class="offer-title" href="${offer.url}" target="_blank" rel="noreferrer">${escapeHTML(offer.title)}</a>
+            <div class="offer-meta">
+              <button class="hide-offer" type="button" data-hide-offer="${escapeHTML(offer.id)}">
+                ${icon("eye-off")}
+                <span>Ukryj</span>
+              </button>
+            </div>
           </td>
           <td data-label="Parametry">
             <div class="facts">${renderFacts(offer.facts)}</div>
@@ -406,12 +361,8 @@ function renderOffers() {
             <div class="table-actions">
               <a class="open-link" href="${offer.url}" target="_blank" rel="noreferrer">
                 ${icon("external-link")}
-                <span>Otworz</span>
+                <span>Otworz ${escapeHTML(providerName(offer.url))}</span>
               </a>
-              <button class="hide-offer" type="button" data-hide-offer="${escapeHTML(offer.id)}">
-                ${icon("eye-off")}
-                <span>Ukryj</span>
-              </button>
             </div>
           </td>
         </tr>
