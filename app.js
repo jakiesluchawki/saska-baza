@@ -1,5 +1,10 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
+const searchState = {
+  lastUpdatedAt: "2026-06-30T07:47:12.035Z",
+  intervalHours: 8,
+};
+
 const offers = [
   {
     id: "zwyciezcow-28",
@@ -8,7 +13,14 @@ const offers = [
     title: "Zwyciezcow 28",
     source: "z pierwszej karty + doprecyzowane",
     url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-saska-kepa-zwyciezcow-76m2/156548047",
-    facts: ["76 m2", "3 pokoje", "5/6, winda", "4900 + 1200 + media", "parking 600", "ok. 11 min"],
+    facts: [
+      "76 m2",
+      "3 pokoje",
+      "5/6, winda",
+      "4900 + 1200 + media",
+      "parking 600",
+      "ok. 11 min",
+    ],
     pros: [
       "Wraca do gry: ogloszenie podaje dwa ustawne pokoje oprocz salonu.",
       "Winda, balkon, internet, panoramiczny widok i sensowny koszt.",
@@ -26,14 +38,21 @@ const offers = [
     title: "Jana Styki / 77 m2",
     source: "nowy trop",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-jana-styki/ob/47432865",
-    facts: ["77 m2", "3 pokoje", "parter z ogrodem", "7500 + 1400 + prad", "ok. 9 min"],
+    facts: [
+      "77 m2",
+      "3 pokoje",
+      "parter z ogrodem",
+      "7500 + 1400 + prad",
+      "ok. 9 min",
+    ],
     pros: [
       "Parter spelnia warunek, bo jest ogrod i taras.",
-      "Dwie sypialnie, dwa miejsca postojowe, pies akceptowany.",
+      "Dwie sypialnie i pies akceptowany.",
       "Bardzo dobry dystans.",
     ],
     cons: [
       "Parter trzeba obejrzec pod katem prywatnosci, swiatla i halasu.",
+      "Wyjasnic, skad informacja o dwoch miejscach postojowych.",
       "Dopytac o internet i kompletne wyposazenie salonu.",
     ],
   },
@@ -43,8 +62,15 @@ const offers = [
     fromBrief: false,
     title: "Miedzynarodowa 50A / 80 m2",
     source: "nowy trop",
-    url: "https://gethome.pl/oferta/wynajme-mieszkanie-warszawa-ul-miedzynarodowa-80m2-trzypokojowe-6-pietro-z-2004-roku-2291884/",
-    facts: ["80 m2", "3 pokoje", "6/8", "5290 + 1500 + 200", "garaz 400", "ok. 20 min"],
+    url: "https://gethome.pl/oferta/wynajme-mieszkanie-warszawa-ul-miedzynarodowa-80m2-trzypokojowe-6-pietro-z-2004-roku-2291884",
+    facts: [
+      "80 m2",
+      "3 pokoje",
+      "6/8",
+      "5290 + 1500 + 200",
+      "garaz 400",
+      "ok. 20 min",
+    ],
     pros: [
       "Dwie sypialnie, dwa balkony, osobna toaleta, prysznic i garaz.",
       "Najlepszy stosunek metraz / koszt z dotychczasowych tropow.",
@@ -61,7 +87,14 @@ const offers = [
     title: "Saska / 74 m2",
     source: "nowy trop",
     url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-saska-kepa-saska-74m2/156501275",
-    facts: ["74 m2", "3 pokoje", "1/5", "6000 + 1500 + prad", "parking", "ok. 12 min"],
+    facts: [
+      "74 m2",
+      "3 pokoje",
+      "1/5",
+      "6000 + 1500 + prad",
+      "parking",
+      "ok. 12 min",
+    ],
     pros: [
       "Dwie sypialnie, parking i budynek z 2010 roku.",
       "Cena jeszcze miesci sie w logice 8-10k.",
@@ -78,7 +111,13 @@ const offers = [
     title: "Londynska / 89 m2",
     source: "nowy trop",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-londynska/ob/47463491",
-    facts: ["89 m2", "3 pokoje", "parter z ogrodem", "7700 + oplaty?", "ok. 16 min"],
+    facts: [
+      "89 m2",
+      "3 pokoje",
+      "parter z ogrodem",
+      "7700 + oplaty?",
+      "ok. 16 min",
+    ],
     pros: [
       "Parter ma ogrod i taras, wiec formalnie przechodzi warunek.",
       "Duzy metraz, parking naziemny i spokojniejszy wariant.",
@@ -95,7 +134,14 @@ const offers = [
     title: "Lizbonska / 70 m2",
     source: "nowy trop",
     url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-lizbonska-70m2-mzn2047643254",
-    facts: ["70 m2", "3 pokoje", "winda", "balkon", "garaz", "raczej 20+ min"],
+    facts: [
+      "70 m2",
+      "3 pokoje",
+      "winda",
+      "balkon",
+      "garaz",
+      "raczej 20+ min",
+    ],
     pros: [
       "Winda, balkon, garaz i standard wygladaja dobrze.",
       "Metraz lapie wazne nice-to-have.",
@@ -112,7 +158,11 @@ const offers = [
     title: "Francuska / klimatyczne 3 pokoje",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/klimatyczne-trzypokojowe-przy-francuskiej-ID4BDhJ",
-    facts: ["3 pokoje", "lokalizacja OK", "z pierwszej karty"],
+    facts: [
+      "3 pokoje",
+      "lokalizacja OK",
+      "z pierwszej karty",
+    ],
     pros: ["Adresowo kuszace, bo Francuska jest w samym obszarze poszukiwan."],
     cons: ["Bez windy, zero mebli i bez prysznica. Must-have fail, nie tracic czasu."],
   },
@@ -123,7 +173,12 @@ const offers = [
     title: "Walecznych 39 / 65 m2",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/saska-kepa-walecznych-39-3pok-65m2-wynajem-ID4BKEx",
-    facts: ["65 m2", "3 pokoje", "parter", "lokalizacja idealna"],
+    facts: [
+      "65 m2",
+      "3 pokoje",
+      "parter",
+      "lokalizacja idealna",
+    ],
     pros: ["Lokalizacja prawie idealna i metraz formalnie przechodzi minimum."],
     cons: ["Parter bez potwierdzonego ogrodu odpada. Do tego slaby standard wedlug pierwszej oceny."],
   },
@@ -134,7 +189,10 @@ const offers = [
     title: "Walecznych / 3 pokoje",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/3-pokoje-saska-kepa-walecznych-ID4kPFr",
-    facts: ["3 pokoje", "z pierwszej karty"],
+    facts: [
+      "3 pokoje",
+      "z pierwszej karty",
+    ],
     pros: ["Ulica bardzo dobra, wiec link zostaje jako punkt odniesienia."],
     cons: ["Bez windy i slaby standard. Przy kryteriach autora to odrzut."],
   },
@@ -145,9 +203,15 @@ const offers = [
     title: "Meksykanska / 85 m2",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/mieszkanie-85m-saska-kepa-warszawa-ID4nsXb",
-    facts: ["85 m2", "3 pokoje", "z pierwszej karty"],
+    facts: [
+      "85 m2",
+      "3 pokoje",
+      "z pierwszej karty",
+    ],
     pros: ["Metraz i lokalizacja sa potencjalnie dobre."],
-    cons: ["Pierwsza ocena: ciasny, malo przyjemny klimat. Sprawdzic tylko, jesli ma winde, dwie sypialnie i sensowne swiatlo."],
+    cons: [
+      "Pierwsza ocena: ciasny, malo przyjemny klimat. Sprawdzic tylko, jesli ma winde, dwie sypialnie i sensowne swiatlo.",
+    ],
   },
   {
     id: "saska-3p-brief",
@@ -156,7 +220,10 @@ const offers = [
     title: "Saska / 3 pokoje",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/saska-3-pokoje-ID4Bs57",
-    facts: ["3 pokoje", "z pierwszej karty"],
+    facts: [
+      "3 pokoje",
+      "z pierwszej karty",
+    ],
     pros: ["Adres w dobrym obszarze."],
     cons: ["Bez windy, wiec odpada przy kryteriach autora."],
   },
@@ -167,7 +234,10 @@ const offers = [
     title: "Nowoczesne na Saskiej Kepie",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/nowoczesne-mieszkanie-na-saskiej-kepie-ID4BkR6",
-    facts: ["bardzo dobry standard", "ponad budzet"],
+    facts: [
+      "bardzo dobry standard",
+      "ponad budzet",
+    ],
     pros: ["Dobry wzorzec standardu: tak ma wygladac mieszkanie warte rozmowy o 10k."],
     cons: ["Over budget. Tylko benchmark albo negocjacja, nie normalny kandydat."],
   },
@@ -178,7 +248,11 @@ const offers = [
     title: "Zwyciezcow / 176 m2",
     source: "z pierwszej karty",
     url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-warszawa-praga-poludnie-saska-kepa-zwyciezcow-176m2/156546679",
-    facts: ["176 m2", "idealny kierunek", "za drogo"],
+    facts: [
+      "176 m2",
+      "idealny kierunek",
+      "za drogo",
+    ],
     pros: ["Wzorzec ukladu i jakosci, gdyby budzet nie istnial."],
     cons: ["Za drogo i za duze. Zostawione tylko jako punkt porownania."],
   },
@@ -214,6 +288,7 @@ const searchInput = document.querySelector("#searchInput");
 const toast = document.querySelector("#toast");
 const restoreHiddenButton = document.querySelector("#restoreHidden");
 const countAll = document.querySelector("#countAll");
+const lastUpdated = document.querySelector("#lastUpdated");
 const tabs = Array.from(document.querySelectorAll(".tab"));
 const hiddenOffersKey = "saska-baza-hidden-offers";
 let activeFilter = "all";
@@ -252,6 +327,18 @@ function icon(name) {
   return `<i data-lucide="${name}"></i>`;
 }
 
+function formatDateTime(value) {
+  if (!value) return null;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return null;
+  return new Intl.DateTimeFormat("pl-PL", {
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(date);
+}
+
 function providerName(url) {
   const host = new URL(url).hostname.replace(/^www\./, "");
   const labels = {
@@ -266,6 +353,26 @@ function providerName(url) {
     "znajdznajem.pl": "ZnajdzNajem",
   };
   return labels[host] || host;
+}
+
+function offerDiscoveredTime(offer) {
+  const timestamp = Date.parse(offer.discoveredAt || "");
+  return Number.isNaN(timestamp) ? 0 : timestamp;
+}
+
+function isFreshOffer(offer) {
+  const timestamp = offerDiscoveredTime(offer);
+  if (!timestamp) return false;
+  const ageMs = Date.now() - timestamp;
+  return ageMs >= 0 && ageMs <= 7 * 24 * 60 * 60 * 1000;
+}
+
+function sortOffers(items) {
+  return [...items].sort((first, second) => {
+    const freshDiff = Number(isFreshOffer(second)) - Number(isFreshOffer(first));
+    if (freshDiff) return freshDiff;
+    return offerDiscoveredTime(second) - offerDiscoveredTime(first);
+  });
 }
 
 function offerText(offer) {
@@ -322,13 +429,17 @@ function renderFacts(facts) {
 function renderSummary() {
   const activeOffersCount = offers.filter((offer) => !hiddenOfferIds.has(offer.id)).length;
   countAll.textContent = `${activeOffersCount} / ${offers.length} pozycji`;
+  const formattedDate = formatDateTime(searchState.lastUpdatedAt);
+  lastUpdated.textContent = formattedDate ? `Sprawdzone ${formattedDate}` : `Auto co ${searchState.intervalHours}h`;
   restoreHiddenButton.disabled = hiddenOfferIds.size === 0;
 }
 
 function renderOffers() {
   const query = searchInput.value.trim().toLowerCase();
-  const visible = offers.filter(
-    (offer) => !hiddenOfferIds.has(offer.id) && filterOffer(offer) && (!query || offerText(offer).includes(query))
+  const visible = sortOffers(
+    offers.filter(
+      (offer) => !hiddenOfferIds.has(offer.id) && filterOffer(offer) && (!query || offerText(offer).includes(query))
+    )
   );
 
   offersBody.innerHTML = visible
@@ -337,6 +448,7 @@ function renderOffers() {
         <tr class="offer-row ${offer.status}">
           <td data-label="Status">
             <span class="status-chip ${offer.status}">${icon(statusIcon(offer.status))}${statusLabel(offer.status)}</span>
+            ${isFreshOffer(offer) ? `<span class="new-chip">Nowe</span>` : ""}
             <span class="source-chip">${escapeHTML(providerName(offer.url))}</span>
           </td>
           <td data-label="Oferta">

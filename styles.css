@@ -362,6 +362,7 @@ main {
 }
 
 .status-chip,
+.new-chip,
 .source-chip,
 .fact {
   display: inline-flex;
@@ -401,6 +402,14 @@ main {
 .status-chip.benchmark {
   background: var(--blue-soft);
   color: var(--blue);
+}
+
+.new-chip {
+  margin-top: 7px;
+  padding: 5px 8px;
+  background: #1e2329;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
 .source-chip {
@@ -659,6 +668,7 @@ main {
   }
 
   .offer-table td[data-label="Status"] .status-chip,
+  .offer-table td[data-label="Status"] .new-chip,
   .offer-table td[data-label="Status"] .source-chip {
     grid-column: 2;
     width: fit-content;
