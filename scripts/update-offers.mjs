@@ -3,6 +3,7 @@ import vm from "node:vm";
 import crypto from "node:crypto";
 
 const APP_FILE = "app.js";
+const INDEX_FILE = "index.html";
 const INTERVAL_HOURS = 8;
 const MAX_NEW_OFFERS = Number(process.env.MAX_NEW_OFFERS || 8);
 const USER_AGENT =
@@ -337,6 +338,17 @@ function replaceOffers(source, block, offers) {
   return `${source.slice(0, block.start)}${serialized}${source.slice(block.end)}`;
 }
 
+function assetVersion(now) {
+  return now.replace(/[^0-9A-Za-z]/g, "").slice(0, 15);
+}
+
+function replaceAssetVersions(source, now) {
+  const version = assetVersion(now);
+  return source
+    .replace(/href="\.\/styles\.css(?:\?v=[^"]*)?"/, `href="./styles.css?v=${version}"`)
+    .replace(/src="\.\/app\.js(?:\?v=[^"]*)?"/, `src="./app.js?v=${version}"`);
+}
+
 async function main() {
   const now = new Date().toISOString();
   const source = fs.readFileSync(APP_FILE, "utf8");
@@ -392,7 +404,12 @@ async function main() {
   console.log(`Added: ${additions.length}`);
   for (const item of additions) console.log(`- add ${item.id}: ${item.title}`);
 
-  if (!dryRun) fs.writeFileSync(APP_FILE, nextSource);
+  if (!dryRun) {
+    fs.writeFileSync(APP_FILE, nextSource);
+    if (fs.existsSync(INDEX_FILE)) {
+      fs.writeFileSync(INDEX_FILE, replaceAssetVersions(fs.readFileSync(INDEX_FILE, "utf8"), now));
+    }
+  }
 }
 
 main().catch((error) => {
