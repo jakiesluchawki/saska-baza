@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-04T10:27:24.871Z",
+  lastUpdatedAt: "2026-07-04T17:28:59.289Z",
   intervalHours: 8,
 };
 
@@ -29,31 +29,6 @@ const offers = [
     cons: [
       "Pierwsza karta miala dobra watpliwosc: trzeba zobaczyc realny uklad drugiej sypialni.",
       "Malo zdjec, wiec telefon i prosba o plan mieszkania.",
-    ],
-  },
-  {
-    id: "jana-styki-77",
-    status: "call",
-    fromBrief: false,
-    title: "Jana Styki / 77 m2",
-    source: "nowy trop",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-jana-styki/ob/47432865",
-    facts: [
-      "77 m2",
-      "3 pokoje",
-      "parter z ogrodem",
-      "7500 + 1400 + prad",
-      "ok. 9 min",
-    ],
-    pros: [
-      "Parter spelnia warunek, bo jest ogrod i taras.",
-      "Dwie sypialnie i pies akceptowany.",
-      "Bardzo dobry dystans.",
-    ],
-    cons: [
-      "Parter trzeba obejrzec pod katem prywatnosci, swiatla i halasu.",
-      "Wyjasnic, skad informacja o dwoch miejscach postojowych.",
-      "Dopytac o internet i kompletne wyposazenie salonu.",
     ],
   },
   {
