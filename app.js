@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-05T10:29:06.756Z",
+  lastUpdatedAt: "2026-07-05T17:33:04.540Z",
   intervalHours: 8,
 };
 
@@ -215,21 +215,6 @@ const offers = [
     ],
     pros: ["Dobry wzorzec standardu: tak ma wygladac mieszkanie warte rozmowy o 10k."],
     cons: ["Over budget. Tylko benchmark albo negocjacja, nie normalny kandydat."],
-  },
-  {
-    id: "zwyciezcow-176",
-    status: "benchmark",
-    fromBrief: true,
-    title: "Zwyciezcow / 176 m2",
-    source: "z pierwszej karty",
-    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-warszawa-praga-poludnie-saska-kepa-zwyciezcow-176m2/156546679",
-    facts: [
-      "176 m2",
-      "idealny kierunek",
-      "za drogo",
-    ],
-    pros: ["Wzorzec ukladu i jakosci, gdyby budzet nie istnial."],
-    cons: ["Za drogo i za duze. Zostawione tylko jako punkt porownania."],
   },
 ];
 
