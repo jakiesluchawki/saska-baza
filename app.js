@@ -1,36 +1,11 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-06T12:14:47.142Z",
+  lastUpdatedAt: "2026-07-06T18:21:35.698Z",
   intervalHours: 8,
 };
 
 const offers = [
-  {
-    id: "zwyciezcow-28",
-    status: "call",
-    fromBrief: true,
-    title: "Zwyciezcow 28",
-    source: "z pierwszej karty + doprecyzowane",
-    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-saska-kepa-zwyciezcow-76m2/156548047",
-    facts: [
-      "76 m2",
-      "3 pokoje",
-      "5/6, winda",
-      "4900 + 1200 + media",
-      "parking 600",
-      "ok. 11 min",
-    ],
-    pros: [
-      "Wraca do gry: ogloszenie podaje dwa ustawne pokoje oprocz salonu.",
-      "Winda, balkon, internet, panoramiczny widok i sensowny koszt.",
-      "Blisko i w budzecie nawet z parkingiem.",
-    ],
-    cons: [
-      "Pierwsza karta miala dobra watpliwosc: trzeba zobaczyc realny uklad drugiej sypialni.",
-      "Malo zdjec, wiec telefon i prosba o plan mieszkania.",
-    ],
-  },
   {
     id: "miedzynarodowa-50a",
     status: "call",
