@@ -1,11 +1,107 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-06T18:21:35.698Z",
-  intervalHours: 8,
+  lastUpdatedAt: "2026-07-07T03:21:51.047Z",
+  intervalMinutes: 15,
 };
 
 const offers = [
+  {
+    id: "auto-domiporta-przestronne-3-pokojowe-mieszkanie-z-kominkiem-i--17a6e3f6",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-07-07T03:21:51.047Z",
+    title: "Przestronne 3-pokojowe mieszkanie z kominkiem i garazem Warszawa , Praga-Poludni",
+    source: "auto 15 min",
+    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-saska-kepa-96m2/156526821",
+    facts: [
+      "96.0 m2",
+      "3 pokoje",
+      "auto 15 min",
+    ],
+    pros: ["Nowy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+  {
+    id: "auto-domiporta-ekskluzywny-apartament-109-m-z-tarasem-i-widokie-5a6cf812",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-07-07T03:21:51.047Z",
+    title: "Ekskluzywny apartament 109 m z tarasem i widokiem na park Warszawa , Praga-Polud",
+    source: "auto 15 min",
+    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-czteropokojowe-warszawa-praga-poludnie-109m2/156559824",
+    facts: [
+      "109 m2",
+      "4 pokoje",
+      "auto 15 min",
+    ],
+    pros: ["Nowy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+  {
+    id: "auto-gratka-mieszkanie-do-wynajecia-65-m-3-pokoje-warszawa-p-12032df9",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-07-07T03:21:51.047Z",
+    title: "Mieszkanie do wynajecia, 65 m , 3 pokoje Warszawa Praga-Poludnie Saska Kepa",
+    source: "auto 15 min",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie/ob/47206189",
+    facts: [
+      "65 m2",
+      "3 pokoje",
+      "auto 15 min",
+    ],
+    pros: ["Nowy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+  {
+    id: "auto-gratka-saska-kepa-dom-w-cenie-mieszkania-a9dc9bbd",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-07-07T03:21:51.047Z",
+    title: "Saska Kepa - dom w cenie mieszkania",
+    source: "auto 15 min",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-jana-styki/ob/47924647",
+    facts: [
+      "82 m2",
+      "4 pokoje",
+      "auto 15 min",
+    ],
+    pros: ["Nowy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+  {
+    id: "auto-gratka-spacious-apartment-in-saska-kepa-with-balcony-9df37d94",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-07-07T03:21:51.047Z",
+    title: "Spacious Apartment in Saska Kepa with balcony",
+    source: "auto 15 min",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-lizbonska/ob/47921355",
+    facts: [
+      "63 m2",
+      "3 pokoje",
+      "auto 15 min",
+    ],
+    pros: ["Nowy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+  {
+    id: "auto-gethome-mieszkanie-do-wynajecia-3-pokoje-warszawa-praga--883d127d",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-07-07T03:21:51.047Z",
+    title: "Mieszkanie do wynajecia 3 pokoje Warszawa Praga-Poludnie, 60 m2, 5 pietro",
+    source: "auto 15 min",
+    url: "https://gethome.pl/oferta/wynajme-mieszkanie-warszawa-aleja-stanow-zjednoczonych-60m2-trzypokojowe-5-pietro-1256284",
+    facts: [
+      "60 m2",
+      "3 pokoje",
+      "auto 15 min",
+    ],
+    pros: ["Nowy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
   {
     id: "miedzynarodowa-50a",
     status: "call",
@@ -274,6 +370,13 @@ function formatDateTime(value) {
   }).format(date);
 }
 
+function refreshIntervalLabel() {
+  const minutes = Number(searchState.intervalMinutes || searchState.intervalHours * 60);
+  if (!Number.isFinite(minutes) || minutes <= 0) return "auto";
+  if (minutes < 60) return `${minutes} min`;
+  return `${minutes / 60}h`;
+}
+
 function providerName(url) {
   const host = new URL(url).hostname.replace(/^www\./, "");
   const labels = {
@@ -365,7 +468,7 @@ function renderSummary() {
   const activeOffersCount = offers.filter((offer) => !hiddenOfferIds.has(offer.id)).length;
   countAll.textContent = `${activeOffersCount} / ${offers.length} pozycji`;
   const formattedDate = formatDateTime(searchState.lastUpdatedAt);
-  lastUpdated.textContent = formattedDate ? `Sprawdzone ${formattedDate}` : `Auto co ${searchState.intervalHours}h`;
+  lastUpdated.textContent = formattedDate ? `Sprawdzone ${formattedDate}` : `Auto co ${refreshIntervalLabel()}`;
   restoreHiddenButton.disabled = hiddenOfferIds.size === 0;
 }
 
@@ -380,7 +483,7 @@ function renderOffers() {
   offersBody.innerHTML = visible
     .map(
       (offer) => `
-        <tr class="offer-row ${offer.status}">
+        <tr class="offer-row ${offer.status} ${isFreshOffer(offer) ? "fresh" : ""}">
           <td data-label="Status">
             <span class="status-chip ${offer.status}">${icon(statusIcon(offer.status))}${statusLabel(offer.status)}</span>
             ${isFreshOffer(offer) ? `<span class="new-chip">Nowe</span>` : ""}

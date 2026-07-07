@@ -2,7 +2,7 @@ name: Update offers
 
 on:
   schedule:
-    - cron: "17 */8 * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 permissions:
