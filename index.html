@@ -5,9 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
     <title>Saska baza</title>
-    <link rel="stylesheet" href="./styles.css?v=20260707T032151" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./styles.css?v=20260707T034251" />
     <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-    <script defer src="./app.js?v=20260707T032151"></script>
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script defer src="./app.js?v=20260707T034251"></script>
   </head>
   <body>
     <header class="topbar">
@@ -16,12 +28,12 @@
           <p class="eyebrow">Saska K&#281;pa / wynajem</p>
           <h1>Saska baza</h1>
         </div>
-        <div class="signal-card" aria-hidden="true">
-          <span class="signal-grid"></span>
-          <span class="signal-sweep"></span>
-          <img src="./lemur.svg" alt="" />
-          <span class="signal-label">NOWE</span>
-          <span class="signal-time">15 MIN</span>
+        <div class="radar-status" aria-label="Automatyczne sprawdzanie ofert">
+          <span class="radar-mark" aria-hidden="true"></span>
+          <span class="radar-copy">
+            <strong>Radar ofert</strong>
+            <span>co 15 min</span>
+          </span>
         </div>
       </div>
       <div class="top-actions">
@@ -58,6 +70,21 @@
           <i data-lucide="search"></i>
           <input id="searchInput" type="search" placeholder="Szukaj ulicy, plusu, ryzyka..." autocomplete="off" />
         </label>
+      </section>
+
+      <section class="map-card" aria-label="Mapa ofert">
+        <div class="map-intro">
+          <p class="eyebrow">Mapa ofert</p>
+          <h2>Saska K&#281;pa i okolice</h2>
+          <p id="mapStats" class="map-stats">0 pinezek</p>
+        </div>
+        <div id="offersMap" class="offers-map" role="img" aria-label="Mapa ofert z pinezkami"></div>
+        <div class="map-legend" aria-label="Legenda mapy">
+          <span><i class="legend-dot fresh"></i>Nowe</span>
+          <span><i class="legend-dot call"></i>Dzwoni&#263;</span>
+          <span><i class="legend-dot verify"></i>Sprawdzi&#263;</span>
+          <span><i class="legend-dot reject"></i>Odpada</span>
+        </div>
       </section>
 
       <section class="layout">

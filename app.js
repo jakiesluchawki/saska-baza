@@ -14,6 +14,7 @@ const offers = [
     title: "Przestronne 3-pokojowe mieszkanie z kominkiem i garazem Warszawa , Praga-Poludni",
     source: "auto 15 min",
     url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-saska-kepa-96m2/156526821",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
     facts: [
       "96.0 m2",
       "3 pokoje",
@@ -30,6 +31,7 @@ const offers = [
     title: "Ekskluzywny apartament 109 m z tarasem i widokiem na park Warszawa , Praga-Polud",
     source: "auto 15 min",
     url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-czteropokojowe-warszawa-praga-poludnie-109m2/156559824",
+    location: { label: "Praga-Poludnie / do potwierdzenia", lat: 52.2357, lng: 21.0609, precision: "area" },
     facts: [
       "109 m2",
       "4 pokoje",
@@ -46,6 +48,7 @@ const offers = [
     title: "Mieszkanie do wynajecia, 65 m , 3 pokoje Warszawa Praga-Poludnie Saska Kepa",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie/ob/47206189",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
     facts: [
       "65 m2",
       "3 pokoje",
@@ -62,6 +65,7 @@ const offers = [
     title: "Saska Kepa - dom w cenie mieszkania",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-jana-styki/ob/47924647",
+    location: { label: "Jana Styki", lat: 52.234362, lng: 21.0568843, precision: "street" },
     facts: [
       "82 m2",
       "4 pokoje",
@@ -78,6 +82,7 @@ const offers = [
     title: "Spacious Apartment in Saska Kepa with balcony",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-lizbonska/ob/47921355",
+    location: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
     facts: [
       "63 m2",
       "3 pokoje",
@@ -94,6 +99,7 @@ const offers = [
     title: "Mieszkanie do wynajecia 3 pokoje Warszawa Praga-Poludnie, 60 m2, 5 pietro",
     source: "auto 15 min",
     url: "https://gethome.pl/oferta/wynajme-mieszkanie-warszawa-aleja-stanow-zjednoczonych-60m2-trzypokojowe-5-pietro-1256284",
+    location: { label: "al. Stanow Zjednoczonych", lat: 52.2266469, lng: 21.0556482, precision: "street" },
     facts: [
       "60 m2",
       "3 pokoje",
@@ -109,6 +115,7 @@ const offers = [
     title: "Miedzynarodowa 50A / 80 m2",
     source: "nowy trop",
     url: "https://gethome.pl/oferta/wynajme-mieszkanie-warszawa-ul-miedzynarodowa-80m2-trzypokojowe-6-pietro-z-2004-roku-2291884",
+    location: { label: "Miedzynarodowa 50A", lat: 52.2352777, lng: 21.0666572, precision: "street" },
     facts: [
       "80 m2",
       "3 pokoje",
@@ -133,6 +140,7 @@ const offers = [
     title: "Saska / 74 m2",
     source: "nowy trop",
     url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-saska-kepa-saska-74m2/156501275",
+    location: { label: "Saska 74", lat: 52.2353554, lng: 21.0596705, precision: "street" },
     facts: [
       "74 m2",
       "3 pokoje",
@@ -157,6 +165,7 @@ const offers = [
     title: "Londynska / 89 m2",
     source: "nowy trop",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-londynska/ob/47463491",
+    location: { label: "Londynska", lat: 52.2377035, lng: 21.0625802, precision: "street" },
     facts: [
       "89 m2",
       "3 pokoje",
@@ -180,6 +189,7 @@ const offers = [
     title: "Lizbonska / 70 m2",
     source: "nowy trop",
     url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-lizbonska-70m2-mzn2047643254",
+    location: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
     facts: [
       "70 m2",
       "3 pokoje",
@@ -204,6 +214,7 @@ const offers = [
     title: "Francuska / klimatyczne 3 pokoje",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/klimatyczne-trzypokojowe-przy-francuskiej-ID4BDhJ",
+    location: { label: "Francuska", lat: 52.2317759, lng: 21.0557167, precision: "street" },
     facts: [
       "3 pokoje",
       "lokalizacja OK",
@@ -219,6 +230,7 @@ const offers = [
     title: "Walecznych 39 / 65 m2",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/saska-kepa-walecznych-39-3pok-65m2-wynajem-ID4BKEx",
+    location: { label: "Walecznych 39", lat: 52.2352566, lng: 21.0555977, precision: "street" },
     facts: [
       "65 m2",
       "3 pokoje",
@@ -235,6 +247,7 @@ const offers = [
     title: "Walecznych / 3 pokoje",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/3-pokoje-saska-kepa-walecznych-ID4kPFr",
+    location: { label: "Walecznych", lat: 52.2350911, lng: 21.0557063, precision: "street" },
     facts: [
       "3 pokoje",
       "z pierwszej karty",
@@ -249,6 +262,7 @@ const offers = [
     title: "Meksykanska / 85 m2",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/mieszkanie-85m-saska-kepa-warszawa-ID4nsXb",
+    location: { label: "Meksykanska", lat: 52.2309343, lng: 21.0597695, precision: "street" },
     facts: [
       "85 m2",
       "3 pokoje",
@@ -266,6 +280,7 @@ const offers = [
     title: "Saska / 3 pokoje",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/saska-3-pokoje-ID4Bs57",
+    location: { label: "Saska", lat: 52.2318538, lng: 21.0610917, precision: "street" },
     facts: [
       "3 pokoje",
       "z pierwszej karty",
@@ -280,6 +295,7 @@ const offers = [
     title: "Nowoczesne na Saskiej Kepie",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/nowoczesne-mieszkanie-na-saskiej-kepie-ID4BkR6",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
     facts: [
       "bardzo dobry standard",
       "ponad budzet",
@@ -320,10 +336,14 @@ const toast = document.querySelector("#toast");
 const restoreHiddenButton = document.querySelector("#restoreHidden");
 const countAll = document.querySelector("#countAll");
 const lastUpdated = document.querySelector("#lastUpdated");
+const mapElement = document.querySelector("#offersMap");
+const mapStats = document.querySelector("#mapStats");
 const tabs = Array.from(document.querySelectorAll(".tab"));
 const hiddenOffersKey = "saska-baza-hidden-offers";
 let activeFilter = "all";
 let hiddenOfferIds = readHiddenOffers();
+let offersMap = null;
+let offersMarkers = null;
 
 function escapeHTML(value) {
   return String(value)
@@ -413,6 +433,15 @@ function sortOffers(items) {
   });
 }
 
+function visibleOffers() {
+  const query = searchInput.value.trim().toLowerCase();
+  return sortOffers(
+    offers.filter(
+      (offer) => !hiddenOfferIds.has(offer.id) && filterOffer(offer) && (!query || offerText(offer).includes(query))
+    )
+  );
+}
+
 function offerText(offer) {
   return [
     offer.title,
@@ -464,6 +493,97 @@ function renderFacts(facts) {
   return facts.map((fact) => `<span class="fact">${escapeHTML(fact)}</span>`).join("");
 }
 
+function mapPinClass(offer) {
+  if (isFreshOffer(offer)) return "fresh";
+  if (offer.status === "call") return "call";
+  if (offer.status === "reject" || offer.status === "benchmark") return "reject";
+  return "verify";
+}
+
+function mapPinLabel(offer) {
+  const provider = providerName(offer.url);
+  return provider === "Nieruchomosci-online" ? "NO" : provider.slice(0, 1);
+}
+
+function renderMapSummary(visible) {
+  if (!mapStats) return;
+  const mapped = visible.filter((offer) => offer.location).length;
+  const exact = visible.filter((offer) => offer.location?.precision === "street").length;
+  mapStats.textContent = `${mapped} pinezek, ${exact} na ulicy`;
+}
+
+function initMap() {
+  if (!mapElement || offersMap || !window.L) return Boolean(offersMap);
+  offersMap = window.L.map(mapElement, {
+    scrollWheelZoom: false,
+    zoomControl: false,
+  }).setView([52.2329941, 21.0571754], 14);
+  window.L.control.zoom({ position: "bottomright" }).addTo(offersMap);
+  window.L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(offersMap);
+  offersMarkers = window.L.layerGroup().addTo(offersMap);
+  return true;
+}
+
+function updateMap(visible) {
+  renderMapSummary(visible);
+  if (!mapElement) return;
+  if (!window.L) {
+    mapElement.classList.add("map-fallback");
+    mapElement.textContent = "Mapa chwilowo niedostepna";
+    return;
+  }
+  if (!initMap()) return;
+
+  offersMarkers.clearLayers();
+  const mapped = visible.filter((offer) => offer.location);
+  const bounds = [];
+
+  mapped.forEach((offer) => {
+    const className = mapPinClass(offer);
+    const marker = window.L.marker([offer.location.lat, offer.location.lng], {
+      icon: window.L.divIcon({
+        className: "map-marker",
+        html: `<span class="map-pin ${className}" title="${escapeHTML(offer.title)}">${escapeHTML(mapPinLabel(offer))}</span>`,
+        iconSize: [34, 34],
+        iconAnchor: [17, 17],
+        popupAnchor: [0, -18],
+      }),
+    }).bindPopup(`
+      <div class="map-popup">
+        <strong>${escapeHTML(offer.title)}</strong>
+        <span>${escapeHTML(offer.location.label)} - ${escapeHTML(providerName(offer.url))}</span>
+        <button type="button" data-map-focus="${escapeHTML(offer.id)}">Pokaz w liscie</button>
+      </div>
+    `);
+    marker.addTo(offersMarkers);
+    bounds.push([offer.location.lat, offer.location.lng]);
+  });
+
+  const fitVisibleBounds = () => {
+    offersMap.invalidateSize();
+    if (!bounds.length) return;
+    offersMap.fitBounds(window.L.latLngBounds(bounds).pad(0.18), {
+      animate: false,
+      maxZoom: bounds.length === 1 ? 15 : 14,
+    });
+  };
+  window.requestAnimationFrame(fitVisibleBounds);
+  window.setTimeout(fitVisibleBounds, 250);
+}
+
+function focusOfferRow(offerId) {
+  const row = Array.from(document.querySelectorAll("[data-offer-row]")).find(
+    (item) => item.dataset.offerRow === offerId
+  );
+  if (!row) return;
+  row.scrollIntoView({ behavior: "smooth", block: "center" });
+  row.classList.add("spotlight");
+  window.setTimeout(() => row.classList.remove("spotlight"), 1200);
+}
+
 function renderSummary() {
   const activeOffersCount = offers.filter((offer) => !hiddenOfferIds.has(offer.id)).length;
   countAll.textContent = `${activeOffersCount} / ${offers.length} pozycji`;
@@ -473,17 +593,12 @@ function renderSummary() {
 }
 
 function renderOffers() {
-  const query = searchInput.value.trim().toLowerCase();
-  const visible = sortOffers(
-    offers.filter(
-      (offer) => !hiddenOfferIds.has(offer.id) && filterOffer(offer) && (!query || offerText(offer).includes(query))
-    )
-  );
+  const visible = visibleOffers();
 
   offersBody.innerHTML = visible
     .map(
       (offer) => `
-        <tr class="offer-row ${offer.status} ${isFreshOffer(offer) ? "fresh" : ""}">
+        <tr class="offer-row ${offer.status} ${isFreshOffer(offer) ? "fresh" : ""}" data-offer-row="${escapeHTML(offer.id)}">
           <td data-label="Status">
             <span class="status-chip ${offer.status}">${icon(statusIcon(offer.status))}${statusLabel(offer.status)}</span>
             ${isFreshOffer(offer) ? `<span class="new-chip">Nowe</span>` : ""}
@@ -521,6 +636,7 @@ function renderOffers() {
     .join("");
 
   emptyState.hidden = Boolean(visible.length);
+  updateMap(visible);
   renderSummary();
   window.lucide?.createIcons();
 }
@@ -559,6 +675,12 @@ async function copyText(text, doneText) {
 }
 
 document.addEventListener("click", (event) => {
+  const mapFocusButton = event.target.closest("[data-map-focus]");
+  if (mapFocusButton) {
+    focusOfferRow(mapFocusButton.dataset.mapFocus);
+    return;
+  }
+
   const hideButton = event.target.closest("[data-hide-offer]");
   if (hideButton) {
     hiddenOfferIds.add(hideButton.dataset.hideOffer);
@@ -598,6 +720,11 @@ document.querySelector("#copyQuestions").addEventListener("click", () => {
 
 document.querySelector("#copyAlerts").addEventListener("click", () => {
   copyText(alerts.join("\n"), "Alerty skopiowane");
+});
+
+window.addEventListener("resize", () => {
+  if (!offersMap) return;
+  window.setTimeout(() => offersMap.invalidateSize(), 80);
 });
 
 renderAlerts();
