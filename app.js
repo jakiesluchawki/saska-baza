@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-07T03:21:51.047Z",
+  lastUpdatedAt: "2026-07-07T07:00:35.924Z",
   intervalMinutes: 15,
 };
 
@@ -14,7 +14,6 @@ const offers = [
     title: "Przestronne 3-pokojowe mieszkanie z kominkiem i garazem Warszawa , Praga-Poludni",
     source: "auto 15 min",
     url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-saska-kepa-96m2/156526821",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
     facts: [
       "96.0 m2",
       "3 pokoje",
@@ -31,7 +30,6 @@ const offers = [
     title: "Ekskluzywny apartament 109 m z tarasem i widokiem na park Warszawa , Praga-Polud",
     source: "auto 15 min",
     url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-czteropokojowe-warszawa-praga-poludnie-109m2/156559824",
-    location: { label: "Praga-Poludnie / do potwierdzenia", lat: 52.2357, lng: 21.0609, precision: "area" },
     facts: [
       "109 m2",
       "4 pokoje",
@@ -48,7 +46,6 @@ const offers = [
     title: "Mieszkanie do wynajecia, 65 m , 3 pokoje Warszawa Praga-Poludnie Saska Kepa",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie/ob/47206189",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
     facts: [
       "65 m2",
       "3 pokoje",
@@ -65,7 +62,6 @@ const offers = [
     title: "Saska Kepa - dom w cenie mieszkania",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-jana-styki/ob/47924647",
-    location: { label: "Jana Styki", lat: 52.234362, lng: 21.0568843, precision: "street" },
     facts: [
       "82 m2",
       "4 pokoje",
@@ -82,7 +78,6 @@ const offers = [
     title: "Spacious Apartment in Saska Kepa with balcony",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-lizbonska/ob/47921355",
-    location: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
     facts: [
       "63 m2",
       "3 pokoje",
@@ -99,7 +94,6 @@ const offers = [
     title: "Mieszkanie do wynajecia 3 pokoje Warszawa Praga-Poludnie, 60 m2, 5 pietro",
     source: "auto 15 min",
     url: "https://gethome.pl/oferta/wynajme-mieszkanie-warszawa-aleja-stanow-zjednoczonych-60m2-trzypokojowe-5-pietro-1256284",
-    location: { label: "al. Stanow Zjednoczonych", lat: 52.2266469, lng: 21.0556482, precision: "street" },
     facts: [
       "60 m2",
       "3 pokoje",
@@ -115,7 +109,6 @@ const offers = [
     title: "Miedzynarodowa 50A / 80 m2",
     source: "nowy trop",
     url: "https://gethome.pl/oferta/wynajme-mieszkanie-warszawa-ul-miedzynarodowa-80m2-trzypokojowe-6-pietro-z-2004-roku-2291884",
-    location: { label: "Miedzynarodowa 50A", lat: 52.2352777, lng: 21.0666572, precision: "street" },
     facts: [
       "80 m2",
       "3 pokoje",
@@ -140,7 +133,6 @@ const offers = [
     title: "Saska / 74 m2",
     source: "nowy trop",
     url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-saska-kepa-saska-74m2/156501275",
-    location: { label: "Saska 74", lat: 52.2353554, lng: 21.0596705, precision: "street" },
     facts: [
       "74 m2",
       "3 pokoje",
@@ -165,7 +157,6 @@ const offers = [
     title: "Londynska / 89 m2",
     source: "nowy trop",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-londynska/ob/47463491",
-    location: { label: "Londynska", lat: 52.2377035, lng: 21.0625802, precision: "street" },
     facts: [
       "89 m2",
       "3 pokoje",
@@ -189,7 +180,6 @@ const offers = [
     title: "Lizbonska / 70 m2",
     source: "nowy trop",
     url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-lizbonska-70m2-mzn2047643254",
-    location: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
     facts: [
       "70 m2",
       "3 pokoje",
@@ -214,7 +204,6 @@ const offers = [
     title: "Francuska / klimatyczne 3 pokoje",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/klimatyczne-trzypokojowe-przy-francuskiej-ID4BDhJ",
-    location: { label: "Francuska", lat: 52.2317759, lng: 21.0557167, precision: "street" },
     facts: [
       "3 pokoje",
       "lokalizacja OK",
@@ -230,7 +219,6 @@ const offers = [
     title: "Walecznych 39 / 65 m2",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/saska-kepa-walecznych-39-3pok-65m2-wynajem-ID4BKEx",
-    location: { label: "Walecznych 39", lat: 52.2352566, lng: 21.0555977, precision: "street" },
     facts: [
       "65 m2",
       "3 pokoje",
@@ -247,7 +235,6 @@ const offers = [
     title: "Walecznych / 3 pokoje",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/3-pokoje-saska-kepa-walecznych-ID4kPFr",
-    location: { label: "Walecznych", lat: 52.2350911, lng: 21.0557063, precision: "street" },
     facts: [
       "3 pokoje",
       "z pierwszej karty",
@@ -262,7 +249,6 @@ const offers = [
     title: "Meksykanska / 85 m2",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/mieszkanie-85m-saska-kepa-warszawa-ID4nsXb",
-    location: { label: "Meksykanska", lat: 52.2309343, lng: 21.0597695, precision: "street" },
     facts: [
       "85 m2",
       "3 pokoje",
@@ -280,7 +266,6 @@ const offers = [
     title: "Saska / 3 pokoje",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/saska-3-pokoje-ID4Bs57",
-    location: { label: "Saska", lat: 52.2318538, lng: 21.0610917, precision: "street" },
     facts: [
       "3 pokoje",
       "z pierwszej karty",
@@ -295,7 +280,6 @@ const offers = [
     title: "Nowoczesne na Saskiej Kepie",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/nowoczesne-mieszkanie-na-saskiej-kepie-ID4BkR6",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
     facts: [
       "bardzo dobry standard",
       "ponad budzet",
