@@ -1,114 +1,20 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-07T07:00:35.924Z",
+  lastUpdatedAt: "2026-07-07T08:10:42.136Z",
   intervalMinutes: 15,
 };
 
 const offers = [
   {
-    id: "auto-domiporta-przestronne-3-pokojowe-mieszkanie-z-kominkiem-i--17a6e3f6",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-07-07T03:21:51.047Z",
-    title: "Przestronne 3-pokojowe mieszkanie z kominkiem i garazem Warszawa , Praga-Poludni",
-    source: "auto 15 min",
-    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-saska-kepa-96m2/156526821",
-    facts: [
-      "96.0 m2",
-      "3 pokoje",
-      "auto 15 min",
-    ],
-    pros: ["Nowy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-domiporta-ekskluzywny-apartament-109-m-z-tarasem-i-widokie-5a6cf812",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-07-07T03:21:51.047Z",
-    title: "Ekskluzywny apartament 109 m z tarasem i widokiem na park Warszawa , Praga-Polud",
-    source: "auto 15 min",
-    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-czteropokojowe-warszawa-praga-poludnie-109m2/156559824",
-    facts: [
-      "109 m2",
-      "4 pokoje",
-      "auto 15 min",
-    ],
-    pros: ["Nowy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gratka-mieszkanie-do-wynajecia-65-m-3-pokoje-warszawa-p-12032df9",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-07-07T03:21:51.047Z",
-    title: "Mieszkanie do wynajecia, 65 m , 3 pokoje Warszawa Praga-Poludnie Saska Kepa",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie/ob/47206189",
-    facts: [
-      "65 m2",
-      "3 pokoje",
-      "auto 15 min",
-    ],
-    pros: ["Nowy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gratka-saska-kepa-dom-w-cenie-mieszkania-a9dc9bbd",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-07-07T03:21:51.047Z",
-    title: "Saska Kepa - dom w cenie mieszkania",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-jana-styki/ob/47924647",
-    facts: [
-      "82 m2",
-      "4 pokoje",
-      "auto 15 min",
-    ],
-    pros: ["Nowy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gratka-spacious-apartment-in-saska-kepa-with-balcony-9df37d94",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-07-07T03:21:51.047Z",
-    title: "Spacious Apartment in Saska Kepa with balcony",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-lizbonska/ob/47921355",
-    facts: [
-      "63 m2",
-      "3 pokoje",
-      "auto 15 min",
-    ],
-    pros: ["Nowy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gethome-mieszkanie-do-wynajecia-3-pokoje-warszawa-praga--883d127d",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-07-07T03:21:51.047Z",
-    title: "Mieszkanie do wynajecia 3 pokoje Warszawa Praga-Poludnie, 60 m2, 5 pietro",
-    source: "auto 15 min",
-    url: "https://gethome.pl/oferta/wynajme-mieszkanie-warszawa-aleja-stanow-zjednoczonych-60m2-trzypokojowe-5-pietro-1256284",
-    facts: [
-      "60 m2",
-      "3 pokoje",
-      "auto 15 min",
-    ],
-    pros: ["Nowy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
     id: "miedzynarodowa-50a",
     status: "call",
     fromBrief: false,
+    updatedAt: "2026-06-21",
     title: "Miedzynarodowa 50A / 80 m2",
     source: "nowy trop",
     url: "https://gethome.pl/oferta/wynajme-mieszkanie-warszawa-ul-miedzynarodowa-80m2-trzypokojowe-6-pietro-z-2004-roku-2291884",
+    location: { label: "Miedzynarodowa 50A", lat: 52.2352777, lng: 21.0666572, precision: "street" },
     facts: [
       "80 m2",
       "3 pokoje",
@@ -130,9 +36,11 @@ const offers = [
     id: "saska-74",
     status: "call",
     fromBrief: false,
+    marketDate: "2026-05-21",
     title: "Saska / 74 m2",
     source: "nowy trop",
     url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-saska-kepa-saska-74m2/156501275",
+    location: { label: "Saska 74", lat: 52.2353554, lng: 21.0596705, precision: "street" },
     facts: [
       "74 m2",
       "3 pokoje",
@@ -140,6 +48,7 @@ const offers = [
       "6000 + 1500 + prad",
       "parking",
       "ok. 12 min",
+      "rynek 47 dni",
     ],
     pros: [
       "Dwie sypialnie, parking i budynek z 2010 roku.",
@@ -154,15 +63,19 @@ const offers = [
     id: "londynska-89",
     status: "verify",
     fromBrief: false,
+    marketDate: "2026-05-21",
+    updatedAt: "2026-07-04",
     title: "Londynska / 89 m2",
     source: "nowy trop",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-londynska/ob/47463491",
+    location: { label: "Londynska", lat: 52.2377035, lng: 21.0625802, precision: "street" },
     facts: [
       "89 m2",
       "3 pokoje",
       "parter z ogrodem",
       "7700 + oplaty?",
       "ok. 16 min",
+      "rynek 47 dni",
     ],
     pros: [
       "Parter ma ogrod i taras, wiec formalnie przechodzi warunek.",
@@ -177,9 +90,12 @@ const offers = [
     id: "lizbonska-70",
     status: "verify",
     fromBrief: false,
+    marketDate: "2026-06-18",
+    updatedAt: "2026-06-18",
     title: "Lizbonska / 70 m2",
     source: "nowy trop",
     url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-lizbonska-70m2-mzn2047643254",
+    location: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
     facts: [
       "70 m2",
       "3 pokoje",
@@ -187,6 +103,7 @@ const offers = [
       "balkon",
       "garaz",
       "raczej 20+ min",
+      "rynek 19 dni",
     ],
     pros: [
       "Winda, balkon, garaz i standard wygladaja dobrze.",
@@ -201,9 +118,11 @@ const offers = [
     id: "francuska-klimatyczne",
     status: "reject",
     fromBrief: true,
+    updatedAt: "2026-06-24",
     title: "Francuska / klimatyczne 3 pokoje",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/klimatyczne-trzypokojowe-przy-francuskiej-ID4BDhJ",
+    location: { label: "Francuska", lat: 52.2317759, lng: 21.0557167, precision: "street" },
     facts: [
       "3 pokoje",
       "lokalizacja OK",
@@ -216,9 +135,11 @@ const offers = [
     id: "walecznych-39-65",
     status: "reject",
     fromBrief: true,
+    updatedAt: "2026-07-06",
     title: "Walecznych 39 / 65 m2",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/saska-kepa-walecznych-39-3pok-65m2-wynajem-ID4BKEx",
+    location: { label: "Walecznych 39", lat: 52.2352566, lng: 21.0555977, precision: "street" },
     facts: [
       "65 m2",
       "3 pokoje",
@@ -232,9 +153,11 @@ const offers = [
     id: "walecznych-3p",
     status: "reject",
     fromBrief: true,
+    updatedAt: "2026-05-19",
     title: "Walecznych / 3 pokoje",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/3-pokoje-saska-kepa-walecznych-ID4kPFr",
+    location: { label: "Walecznych", lat: 52.2350911, lng: 21.0557063, precision: "street" },
     facts: [
       "3 pokoje",
       "z pierwszej karty",
@@ -246,9 +169,11 @@ const offers = [
     id: "meksykanska-85-brief",
     status: "verify",
     fromBrief: true,
+    updatedAt: "2026-07-03",
     title: "Meksykanska / 85 m2",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/mieszkanie-85m-saska-kepa-warszawa-ID4nsXb",
+    location: { label: "Meksykanska", lat: 52.2309343, lng: 21.0597695, precision: "street" },
     facts: [
       "85 m2",
       "3 pokoje",
@@ -263,9 +188,11 @@ const offers = [
     id: "saska-3p-brief",
     status: "reject",
     fromBrief: true,
+    updatedAt: "2026-05-21",
     title: "Saska / 3 pokoje",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/saska-3-pokoje-ID4Bs57",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
     facts: [
       "3 pokoje",
       "z pierwszej karty",
@@ -277,9 +204,11 @@ const offers = [
     id: "nowoczesne-overbudget",
     status: "benchmark",
     fromBrief: true,
+    updatedAt: "2026-07-06",
     title: "Nowoczesne na Saskiej Kepie",
     source: "z pierwszej karty",
     url: "https://www.otodom.pl/pl/oferta/nowoczesne-mieszkanie-na-saskiej-kepie-ID4BkR6",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
     facts: [
       "bardzo dobry standard",
       "ponad budzet",
@@ -324,6 +253,7 @@ const mapElement = document.querySelector("#offersMap");
 const mapStats = document.querySelector("#mapStats");
 const tabs = Array.from(document.querySelectorAll(".tab"));
 const hiddenOffersKey = "saska-baza-hidden-offers";
+const freshMarketDays = 2;
 let activeFilter = "all";
 let hiddenOfferIds = readHiddenOffers();
 let offersMap = null;
@@ -402,18 +332,27 @@ function offerDiscoveredTime(offer) {
   return Number.isNaN(timestamp) ? 0 : timestamp;
 }
 
+function offerMarketTime(offer) {
+  const timestamp = Date.parse(offer.marketDate || "");
+  return Number.isNaN(timestamp) ? 0 : timestamp;
+}
+
 function isFreshOffer(offer) {
-  const timestamp = offerDiscoveredTime(offer);
+  const timestamp = offerMarketTime(offer);
   if (!timestamp) return false;
   const ageMs = Date.now() - timestamp;
-  return ageMs >= 0 && ageMs <= 7 * 24 * 60 * 60 * 1000;
+  return ageMs >= 0 && ageMs <= freshMarketDays * 24 * 60 * 60 * 1000;
+}
+
+function offerSortTime(offer) {
+  return offerMarketTime(offer) || offerDiscoveredTime(offer);
 }
 
 function sortOffers(items) {
   return [...items].sort((first, second) => {
     const freshDiff = Number(isFreshOffer(second)) - Number(isFreshOffer(first));
     if (freshDiff) return freshDiff;
-    return offerDiscoveredTime(second) - offerDiscoveredTime(first);
+    return offerSortTime(second) - offerSortTime(first);
   });
 }
 

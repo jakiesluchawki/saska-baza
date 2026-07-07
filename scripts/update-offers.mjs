@@ -6,6 +6,9 @@ const APP_FILE = "app.js";
 const INDEX_FILE = "index.html";
 const INTERVAL_MINUTES = 15;
 const MAX_NEW_OFFERS = Number(process.env.MAX_NEW_OFFERS || 8);
+const FRESH_MARKET_DAYS = Number(process.env.FRESH_MARKET_DAYS || 2);
+const AUTO_KEEP_MARKET_DAYS = Number(process.env.AUTO_KEEP_MARKET_DAYS || 3);
+const MAX_PRICE_ZL = Number(process.env.MAX_PRICE_ZL || 10000);
 const USER_AGENT =
   "Mozilla/5.0 (compatible; SaskaBazaBot/1.0; +https://jakiesluchawki.github.io/saska-baza/)";
 
@@ -80,6 +83,20 @@ const LOCATION_ALIASES = [
   ["zwyciezcow", /\bzwyciezcow\b/i],
   ["saska-kepa", /\bsaska|saskiej\b/i],
 ];
+
+const LOCATION_POINTS = {
+  "al-stanow-zjednoczonych": { label: "al. Stanow Zjednoczonych", lat: 52.2266469, lng: 21.0556482, precision: "street" },
+  francuska: { label: "Francuska", lat: 52.2317759, lng: 21.0557167, precision: "street" },
+  "jana-styki": { label: "Jana Styki", lat: 52.234362, lng: 21.0568843, precision: "street" },
+  lizbonska: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
+  londynska: { label: "Londynska", lat: 52.2377035, lng: 21.0625802, precision: "street" },
+  miedzynarodowa: { label: "Miedzynarodowa", lat: 52.2352777, lng: 21.0666572, precision: "street" },
+  meksykanska: { label: "Meksykanska", lat: 52.2309343, lng: 21.0597695, precision: "street" },
+  saska: { label: "Saska", lat: 52.2318538, lng: 21.0610917, precision: "street" },
+  walecznych: { label: "Walecznych", lat: 52.2350911, lng: 21.0557063, precision: "street" },
+  zwyciezcow: { label: "Zwyciezcow", lat: 52.2325, lng: 21.062, precision: "street" },
+  "saska-kepa": { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
+};
 
 const dryRun = process.argv.includes("--dry-run");
 
@@ -165,6 +182,104 @@ function extractAreaM2(value) {
   return match ? Number(match[1]) : null;
 }
 
+function parseMoney(value) {
+  const amount = String(value).replace(/\s+/g, "");
+  const parsed = Number(amount);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function extractPriceZl(value) {
+  const ascii = toAscii(value);
+  const labeled = ascii.match(/\bcena\s*:?\s*(\d[\d\s]{3,7})\s*(?:zl|pln)\b/i);
+  if (labeled) return parseMoney(labeled[1]);
+  const generic = ascii.match(/\b(\d[\d\s]{3,7})\s*(?:zl|pln)\b/i);
+  return generic ? parseMoney(generic[1]) : null;
+}
+
+function startOfDay(date) {
+  return new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+}
+
+function parseDateOnly(value) {
+  const ascii = toAscii(value);
+  const iso = ascii.match(/\b(20\d{2})-(\d{2})-(\d{2})\b/);
+  if (iso) return `${iso[1]}-${iso[2]}-${iso[3]}`;
+  const pl = ascii.match(/\b(\d{1,2})[./-](\d{1,2})[./-](20\d{2})\b/);
+  if (pl) {
+    const day = pl[1].padStart(2, "0");
+    const month = pl[2].padStart(2, "0");
+    return `${pl[3]}-${month}-${day}`;
+  }
+  return null;
+}
+
+function isoDateFromRelative(daysAgo, now) {
+  const date = startOfDay(new Date(now));
+  date.setUTCDate(date.getUTCDate() - daysAgo);
+  return date.toISOString().slice(0, 10);
+}
+
+function marketAgeDays(isoDate, now) {
+  if (!isoDate) return null;
+  const date = new Date(`${isoDate}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) return null;
+  return Math.floor((startOfDay(new Date(now)).getTime() - date.getTime()) / 86400000);
+}
+
+function marketAgeFact(isoDate, now) {
+  const age = marketAgeDays(isoDate, now);
+  if (age === null || age < 0) return null;
+  if (age === 0) return "rynek dzisiaj";
+  if (age === 1) return "rynek wczoraj";
+  return `rynek ${age} dni`;
+}
+
+function extractJsonLdDates(html) {
+  const dates = {};
+  const blocks = [...html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
+  for (const [, block] of blocks) {
+    try {
+      const parsed = JSON.parse(decodeEntities(block));
+      const stack = Array.isArray(parsed) ? [...parsed] : [parsed];
+      while (stack.length) {
+        const item = stack.pop();
+        if (!item || typeof item !== "object") continue;
+        for (const value of Object.values(item)) {
+          if (Array.isArray(value)) stack.push(...value);
+          else if (value && typeof value === "object") stack.push(value);
+        }
+        const posted = item.datePosted || item.datePublished || item.dateCreated;
+        const modified = item.dateModified || item.updatedAt;
+        if (!dates.postedAt && posted) dates.postedAt = parseDateOnly(String(posted));
+        if (!dates.updatedAt && modified) dates.updatedAt = parseDateOnly(String(modified));
+      }
+    } catch {
+      // Ignore malformed metadata; visible text parsing handles common portals.
+    }
+  }
+  return dates;
+}
+
+function extractListingDates(html, now) {
+  const text = visibleText(html);
+  const ascii = toAscii(text).toLowerCase();
+  const dates = extractJsonLdDates(html);
+
+  const dateAdded = ascii.match(/data dodania\s*:?\s*(\d{1,2}[./-]\d{1,2}[./-]20\d{2})/i);
+  if (!dates.postedAt && dateAdded) dates.postedAt = parseDateOnly(dateAdded[1]);
+
+  const updated = ascii.match(/aktualizacja\s*:?\s*(\d{1,2}[./-]\d{1,2}[./-]20\d{2})/i);
+  if (!dates.updatedAt && updated) dates.updatedAt = parseDateOnly(updated[1]);
+
+  const daysAgo = ascii.match(/data dodania\s*:?\s*(\d{1,3})\s*dni temu/i);
+  if (!dates.postedAt && daysAgo) dates.postedAt = isoDateFromRelative(Number(daysAgo[1]), now);
+
+  if (!dates.postedAt && /data dodania\s*:?\s*dzisiaj/i.test(ascii)) dates.postedAt = isoDateFromRelative(0, now);
+  if (!dates.postedAt && /data dodania\s*:?\s*wczoraj/i.test(ascii)) dates.postedAt = isoDateFromRelative(1, now);
+
+  return dates;
+}
+
 function isLikelyOfferUrl(url) {
   try {
     const host = normalizedHost(url);
@@ -201,27 +316,32 @@ function hasArchivalMarker(text) {
   return ARCHIVAL_PATTERNS.some((pattern) => pattern.test(text));
 }
 
-function classifyPage({ offer, url, status, finalUrl, body }) {
+function classifyPage({ offer, url, status, finalUrl, body, now }) {
   const text = visibleText(body);
   const normalizedText = toAscii(text).toLowerCase();
   const pageTitle = extractTag(body, "title");
   const h1 = extractTag(body, "h1");
   const titleLine = `${pageTitle} ${h1}`.toLowerCase();
+  const listingDates = extractListingDates(body, now);
+  const priceZl = extractPriceZl(`${titleLine} ${normalizedText.slice(0, 6000)}`);
 
   if (status >= 400) {
-    return { keep: false, reason: `HTTP ${status}`, pageTitle, h1 };
+    return { keep: false, reason: `HTTP ${status}`, pageTitle, h1, ...listingDates };
   }
   if (!allowedUrl(finalUrl)) {
-    return { keep: false, reason: `redirect to ${normalizedHost(finalUrl)}`, pageTitle, h1 };
+    return { keep: false, reason: `redirect to ${normalizedHost(finalUrl)}`, pageTitle, h1, ...listingDates };
   }
   if (hasArchivalMarker(normalizedText)) {
-    return { keep: false, reason: "archival marker", pageTitle, h1 };
+    return { keep: false, reason: "archival marker", pageTitle, h1, ...listingDates };
   }
   if (/\bna sprzedaz\b|\bsprzedaz\b|\bsprzedam\b/.test(titleLine)) {
-    return { keep: false, reason: "sale listing", pageTitle, h1 };
+    return { keep: false, reason: "sale listing", pageTitle, h1, ...listingDates };
   }
   if (/\bpokoj\b|\bpokoju\b|\bpokoje jednoosobowe\b/.test(titleLine) && !/\bmieszkanie\b|\bapartament\b/.test(titleLine)) {
-    return { keep: false, reason: "room listing", pageTitle, h1 };
+    return { keep: false, reason: "room listing", pageTitle, h1, ...listingDates };
+  }
+  if ((!offer || isAutoOffer(offer)) && priceZl !== null && priceZl > MAX_PRICE_ZL) {
+    return { keep: false, reason: `over budget ${priceZl} zl`, pageTitle, h1, ...listingDates };
   }
 
   if (!offer) {
@@ -236,11 +356,11 @@ function classifyPage({ offer, url, status, finalUrl, body }) {
     const rental = /\bwynajem\b|\bwynajme\b|\bwynajecia\b|\bwynajecie\b/.test(firstPageChunk);
     const dwelling = /\bmieszkanie\b|\bapartament\b/.test(firstPageChunk);
     if (!relevantLocation || excludedLocation || !desiredRooms || unwantedRooms || tooSmall || !rental || !dwelling) {
-      return { keep: false, reason: "not a matching rental", pageTitle, h1 };
+      return { keep: false, reason: "not a matching rental", pageTitle, h1, ...listingDates };
     }
   }
 
-  return { keep: true, reason: "ok", pageTitle, h1, finalUrl: canonicalUrl(finalUrl) };
+  return { keep: true, reason: "ok", pageTitle, h1, finalUrl: canonicalUrl(finalUrl), ...listingDates };
 }
 
 function extractUrls(html, baseUrl) {
@@ -370,21 +490,81 @@ function extractFacts(text) {
   return [...new Set(facts)].slice(0, 5);
 }
 
+function withMarketFact(facts, marketDate, now) {
+  const cleaned = (facts || []).filter((fact) => !/^rynek\s/i.test(toAscii(fact)));
+  const fact = marketAgeFact(marketDate, now);
+  if (!fact) return cleaned;
+  const autoIndex = cleaned.findIndex((item) => /auto\s+\d+\s*min/i.test(item));
+  if (autoIndex === -1) return [...cleaned, fact];
+  return [...cleaned.slice(0, autoIndex), fact, ...cleaned.slice(autoIndex)];
+}
+
+function inferLocation(title, url) {
+  const haystack = toAscii(`${title} ${url}`).toLowerCase();
+  if (/\bmiedzynarodowa\s*50a\b/.test(haystack)) {
+    return { label: "Miedzynarodowa 50A", lat: 52.2352777, lng: 21.0666572, precision: "street" };
+  }
+  if (/\bsaska\s*74\b|\bsaska-74m2\b/.test(haystack)) {
+    return { label: "Saska 74", lat: 52.2353554, lng: 21.0596705, precision: "street" };
+  }
+  if (/\bwalecznych\s*39\b|\bwalecznych-39\b/.test(haystack)) {
+    return { label: "Walecznych 39", lat: 52.2352566, lng: 21.0555977, precision: "street" };
+  }
+  if (/\bstanow zjednoczonych\b/.test(haystack)) return LOCATION_POINTS["al-stanow-zjednoczonych"];
+  const alias = LOCATION_ALIASES.find(([, pattern]) => pattern.test(haystack))?.[0];
+  if (!alias) return LOCATION_POINTS["saska-kepa"];
+  return LOCATION_POINTS[alias] || LOCATION_POINTS["saska-kepa"];
+}
+
+function isAutoOffer(offer) {
+  return !offer.fromBrief && /^auto-/.test(offer.id || "");
+}
+
+function isFreshMarketPage(page, now) {
+  const age = marketAgeDays(page.postedAt, now);
+  return age !== null && age >= 0 && age <= FRESH_MARKET_DAYS;
+}
+
+function shouldKeepAutoOffer(offer, page, now) {
+  if (!isAutoOffer(offer)) return { keep: true, reason: "manual" };
+  const age = marketAgeDays(page.postedAt, now);
+  if (age === null) return { keep: false, reason: "auto listing without market date" };
+  if (age > AUTO_KEEP_MARKET_DAYS) return { keep: false, reason: `auto listing ${age} days old` };
+  return { keep: true, reason: "fresh enough" };
+}
+
+function enrichOfferWithPage(offer, page, now) {
+  const marketDate = page.postedAt || offer.marketDate;
+  const updatedAt = page.updatedAt || offer.updatedAt;
+  const next = {
+    ...offer,
+    url: page.finalUrl || offer.url,
+    facts: withMarketFact(offer.facts || [], marketDate, now),
+  };
+  if (marketDate) next.marketDate = marketDate;
+  if (updatedAt) next.updatedAt = updatedAt;
+  if (!next.location) next.location = inferLocation(next.title, next.url);
+  return next;
+}
+
 function buildOffer(url, page, now) {
   const title = toAscii(page.h1 || page.pageTitle || "Nowa oferta").replace(/\s+\|\s+.*$/, "").slice(0, 80);
   const provider = normalizedHost(url).split(".")[0];
   const id = `auto-${provider}-${slugify(title) || shortHash(url)}-${shortHash(url)}`;
-  const facts = extractFacts(`${page.h1} ${page.pageTitle}`);
+  const facts = withMarketFact(extractFacts(`${page.h1} ${page.pageTitle}`), page.postedAt, now);
   return {
     id,
     status: "verify",
     fromBrief: false,
     discoveredAt: now,
+    marketDate: page.postedAt,
+    ...(page.updatedAt ? { updatedAt: page.updatedAt } : {}),
     title,
     source: "auto 15 min",
     url,
+    location: inferLocation(title, url),
     facts,
-    pros: ["Nowy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
     cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
   };
 }
@@ -406,7 +586,15 @@ function serializeOffer(offer) {
   for (const field of ["id", "status"]) lines.push(`    ${field}: ${quote(offer[field])},`);
   lines.push(`    fromBrief: ${offer.fromBrief ? "true" : "false"},`);
   if (offer.discoveredAt) lines.push(`    discoveredAt: ${quote(offer.discoveredAt)},`);
+  if (offer.marketDate) lines.push(`    marketDate: ${quote(offer.marketDate)},`);
+  if (offer.updatedAt) lines.push(`    updatedAt: ${quote(offer.updatedAt)},`);
   for (const field of ["title", "source", "url"]) lines.push(`    ${field}: ${quote(offer[field])},`);
+  if (offer.location) {
+    const location = offer.location;
+    lines.push(
+      `    location: { label: ${quote(location.label)}, lat: ${location.lat}, lng: ${location.lng}, precision: ${quote(location.precision)} },`
+    );
+  }
   lines.push(`    facts: ${arrayLiteral(offer.facts || [])},`);
   lines.push(`    pros: ${arrayLiteral(offer.pros || [])},`);
   lines.push(`    cons: ${arrayLiteral(offer.cons || [])},`);
@@ -450,9 +638,14 @@ async function main() {
   for (const offer of offers) {
     try {
       const response = await fetchPage(offer.url);
-      const page = classifyPage({ offer, ...response });
+      const page = classifyPage({ offer, now, ...response });
       if (page.keep) {
-        const keptOffer = { ...offer, url: page.finalUrl || offer.url };
+        const autoKeep = shouldKeepAutoOffer(offer, page, now);
+        if (!autoKeep.keep) {
+          removed.push({ id: offer.id, title: offer.title, reason: autoKeep.reason });
+          continue;
+        }
+        const keptOffer = enrichOfferWithPage(offer, page, now);
         kept.push(keptOffer);
         const signature = offerSignature(keptOffer);
         if (signature) existingSignatures.add(signature);
@@ -477,8 +670,14 @@ async function main() {
 
     try {
       const response = await fetchPage(url);
-      const page = classifyPage({ url, ...response });
+      const page = classifyPage({ url, now, ...response });
       if (!page.keep) continue;
+      if (!isFreshMarketPage(page, now)) {
+        const age = marketAgeDays(page.postedAt, now);
+        const reason = age === null ? "no market date" : `market date ${age} days old`;
+        console.log(`- skip stale ${reason}: ${page.h1 || page.pageTitle || url}`);
+        continue;
+      }
       const finalKey = canonicalKey(page.finalUrl || url);
       if (existingKeys.has(finalKey)) continue;
       const offer = buildOffer(page.finalUrl || url, page, now);
