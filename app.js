@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-08T15:32:48.624Z",
+  lastUpdatedAt: "2026-07-08T17:06:32.755Z",
   intervalMinutes: 15,
 };
 
@@ -131,7 +131,7 @@ const offers = [
     status: "verify",
     fromBrief: false,
     marketDate: "2026-06-18",
-    updatedAt: "2026-06-18",
+    updatedAt: "2026-07-08",
     title: "Lizbonska / 70 m2",
     source: "nowy trop",
     url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-lizbonska-70m2-mzn2047643254",
