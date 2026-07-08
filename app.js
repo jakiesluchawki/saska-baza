@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-08T11:29:19.702Z",
+  lastUpdatedAt: "2026-07-08T13:08:52.492Z",
   intervalMinutes: 15,
 };
 
@@ -239,22 +239,6 @@ const offers = [
     ],
     pros: ["Adres w dobrym obszarze."],
     cons: ["Bez windy, wiec odpada przy kryteriach autora."],
-  },
-  {
-    id: "nowoczesne-overbudget",
-    status: "benchmark",
-    fromBrief: true,
-    updatedAt: "2026-07-06",
-    title: "Nowoczesne na Saskiej Kepie",
-    source: "z pierwszej karty",
-    url: "https://www.otodom.pl/pl/oferta/nowoczesne-mieszkanie-na-saskiej-kepie-ID4BkR6",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
-    facts: [
-      "bardzo dobry standard",
-      "ponad budzet",
-    ],
-    pros: ["Dobry wzorzec standardu: tak ma wygladac mieszkanie warte rozmowy o 10k."],
-    cons: ["Over budget. Tylko benchmark albo negocjacja, nie normalny kandydat."],
   },
 ];
 
