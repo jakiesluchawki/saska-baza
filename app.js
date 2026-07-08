@@ -1,11 +1,31 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-08T04:31:06.061Z",
+  lastUpdatedAt: "2026-07-08T07:14:24.232Z",
   intervalMinutes: 15,
 };
 
 const offers = [
+  {
+    id: "auto-morizon-92-m-saska-kepa-3-pokoje-duzy-narozny-balkon-gar-483b52d0",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-07-08T07:14:24.232Z",
+    marketDate: "2026-07-08",
+    updatedAt: "2026-07-08",
+    title: "92 m Saska Kepa 3 pokoje duzy narozny balkon garaz II pietro ochrona 24/7 dostep",
+    source: "auto 15 min",
+    url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-92m2-mzn2047747209",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
+    facts: [
+      "92 m2",
+      "3 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
   {
     id: "auto-gratka-saska-kepa-piekny-taras-zielen-garaz-kominek-260ab91d",
     status: "verify",
