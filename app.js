@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-09T08:54:38.119Z",
+  lastUpdatedAt: "2026-07-09T11:51:41.398Z",
   intervalMinutes: 15,
 };
 
@@ -50,7 +50,7 @@ const offers = [
     id: "miedzynarodowa-50a",
     status: "call",
     fromBrief: false,
-    updatedAt: "2026-06-21",
+    updatedAt: "2026-07-09",
     title: "Miedzynarodowa 50A / 80 m2",
     source: "nowy trop",
     url: "https://gethome.pl/oferta/wynajme-mieszkanie-warszawa-ul-miedzynarodowa-80m2-trzypokojowe-6-pietro-z-2004-roku-2291884",
