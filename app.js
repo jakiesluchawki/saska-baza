@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-11T21:33:01.788Z",
+  lastUpdatedAt: "2026-07-11T22:30:18.332Z",
   intervalMinutes: 15,
 };
 
@@ -77,33 +77,6 @@ const offers = [
     cons: [
       "Winda, internet, pralka/zmywarka i widok wymagaja potwierdzenia.",
       "Pierwsze pietro bez windy byloby odrzutem.",
-    ],
-  },
-  {
-    id: "londynska-89",
-    status: "verify",
-    fromBrief: false,
-    marketDate: "2026-05-21",
-    updatedAt: "2026-07-04",
-    title: "Londynska / 89 m2",
-    source: "nowy trop",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-londynska/ob/47463491",
-    location: { label: "Londynska", lat: 52.2377035, lng: 21.0625802, precision: "street" },
-    facts: [
-      "89 m2",
-      "3 pokoje",
-      "parter z ogrodem",
-      "7700 + oplaty?",
-      "ok. 16 min",
-      "rynek 51 dni",
-    ],
-    pros: [
-      "Parter ma ogrod i taras, wiec formalnie przechodzi warunek.",
-      "Duzy metraz, parking naziemny i spokojniejszy wariant.",
-    ],
-    cons: [
-      "Trzeba potwierdzic pelny total, umeblowanie i czy to na pewno mieszkanie rodzinne, nie biurowy klimat.",
-      "Parter do oceny pod katem prywatnosci.",
     ],
   },
   {
