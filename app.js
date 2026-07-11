@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-10T23:14:18.423Z",
+  lastUpdatedAt: "2026-07-11T00:11:03.882Z",
   intervalMinutes: 15,
 };
 
@@ -19,26 +19,6 @@ const offers = [
     location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
     facts: [
       "92 m2",
-      "3 pokoje",
-      "rynek 2 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gratka-saska-kepa-piekny-taras-zielen-garaz-kominek-260ab91d",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-07-07T15:50:36.675Z",
-    marketDate: "2026-07-07",
-    updatedAt: "2026-07-07",
-    title: "Saska Kepa, piekny taras, zielen, garaz, kominek",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-walecznych/ob/48151487",
-    location: { label: "Walecznych", lat: 52.2350911, lng: 21.0557063, precision: "street" },
-    facts: [
-      "96 m2",
       "3 pokoje",
       "rynek 3 dni",
       "auto 15 min",
@@ -88,7 +68,7 @@ const offers = [
       "6000 + 1500 + prad",
       "parking",
       "ok. 12 min",
-      "rynek 50 dni",
+      "rynek 51 dni",
     ],
     pros: [
       "Dwie sypialnie, parking i budynek z 2010 roku.",
@@ -115,7 +95,7 @@ const offers = [
       "parter z ogrodem",
       "7700 + oplaty?",
       "ok. 16 min",
-      "rynek 50 dni",
+      "rynek 51 dni",
     ],
     pros: [
       "Parter ma ogrod i taras, wiec formalnie przechodzi warunek.",
@@ -143,7 +123,7 @@ const offers = [
       "balkon",
       "garaz",
       "raczej 20+ min",
-      "rynek 22 dni",
+      "rynek 23 dni",
     ],
     pros: [
       "Winda, balkon, garaz i standard wygladaja dobrze.",
