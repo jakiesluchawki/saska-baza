@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-12T21:32:02.197Z",
+  lastUpdatedAt: "2026-07-12T22:29:56.704Z",
   intervalMinutes: 15,
 };
 
@@ -57,34 +57,6 @@ const offers = [
     cons: [
       "Winda, internet, pralka/zmywarka i widok wymagaja potwierdzenia.",
       "Pierwsze pietro bez windy byloby odrzutem.",
-    ],
-  },
-  {
-    id: "lizbonska-70",
-    status: "verify",
-    fromBrief: false,
-    marketDate: "2026-06-18",
-    updatedAt: "2026-07-08",
-    title: "Lizbonska / 70 m2",
-    source: "nowy trop",
-    url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-lizbonska-70m2-mzn2047643254",
-    location: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
-    facts: [
-      "70 m2",
-      "3 pokoje",
-      "winda",
-      "balkon",
-      "garaz",
-      "raczej 20+ min",
-      "rynek 24 dni",
-    ],
-    pros: [
-      "Winda, balkon, garaz i standard wygladaja dobrze.",
-      "Metraz lapie wazne nice-to-have.",
-    ],
-    cons: [
-      "Dystans prawdopodobnie wychodzi poza komfortowy limit.",
-      "Pelny koszt i dokladny adres trzeba potwierdzic przed czasem na ogledziny.",
     ],
   },
   {
