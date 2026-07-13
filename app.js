@@ -1,11 +1,30 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-13T11:28:51.521Z",
+  lastUpdatedAt: "2026-07-13T13:40:04.135Z",
   intervalMinutes: 15,
 };
 
 const offers = [
+  {
+    id: "auto-domiporta-mieszkanie-trzypokojowe-na-wynajem-warszawa-prag-0fd29351",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-07-13T13:40:04.135Z",
+    marketDate: "2026-07-13",
+    title: "Mieszkanie trzypokojowe na wynajem Warszawa , Praga-Poludnie , Lizbonska - 63,0m",
+    source: "auto 15 min",
+    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-lizbonska-63m2/156570886",
+    location: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
+    facts: [
+      "63.0 m2",
+      "3 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
   {
     id: "miedzynarodowa-50a",
     status: "call",
