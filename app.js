@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-13T04:45:12.489Z",
+  lastUpdatedAt: "2026-07-13T08:12:41.905Z",
   intervalMinutes: 15,
 };
 
@@ -77,24 +77,6 @@ const offers = [
     cons: ["Bez windy, zero mebli i bez prysznica. Must-have fail, nie tracic czasu."],
   },
   {
-    id: "walecznych-39-65",
-    status: "reject",
-    fromBrief: true,
-    updatedAt: "2026-07-06",
-    title: "Walecznych 39 / 65 m2",
-    source: "z pierwszej karty",
-    url: "https://www.otodom.pl/pl/oferta/saska-kepa-walecznych-39-3pok-65m2-wynajem-ID4BKEx",
-    location: { label: "Walecznych 39", lat: 52.2352566, lng: 21.0555977, precision: "street" },
-    facts: [
-      "65 m2",
-      "3 pokoje",
-      "parter",
-      "lokalizacja idealna",
-    ],
-    pros: ["Lokalizacja prawie idealna i metraz formalnie przechodzi minimum."],
-    cons: ["Parter bez potwierdzonego ogrodu odpada. Do tego slaby standard wedlug pierwszej oceny."],
-  },
-  {
     id: "walecznych-3p",
     status: "reject",
     fromBrief: true,
@@ -109,25 +91,6 @@ const offers = [
     ],
     pros: ["Ulica bardzo dobra, wiec link zostaje jako punkt odniesienia."],
     cons: ["Bez windy i slaby standard. Przy kryteriach autora to odrzut."],
-  },
-  {
-    id: "meksykanska-85-brief",
-    status: "verify",
-    fromBrief: true,
-    updatedAt: "2026-07-03",
-    title: "Meksykanska / 85 m2",
-    source: "z pierwszej karty",
-    url: "https://www.otodom.pl/pl/oferta/mieszkanie-85m-saska-kepa-warszawa-ID4nsXb",
-    location: { label: "Meksykanska", lat: 52.2309343, lng: 21.0597695, precision: "street" },
-    facts: [
-      "85 m2",
-      "3 pokoje",
-      "z pierwszej karty",
-    ],
-    pros: ["Metraz i lokalizacja sa potencjalnie dobre."],
-    cons: [
-      "Pierwsza ocena: ciasny, malo przyjemny klimat. Sprawdzic tylko, jesli ma winde, dwie sypialnie i sensowne swiatlo.",
-    ],
   },
   {
     id: "saska-3p-brief",
