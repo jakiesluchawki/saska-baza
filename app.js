@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-16T07:34:38.751Z",
+  lastUpdatedAt: "2026-07-16T09:48:29.663Z",
   intervalMinutes: 15,
 };
 
