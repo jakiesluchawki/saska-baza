@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-16T09:48:29.663Z",
+  lastUpdatedAt: "2026-07-16T11:28:30.234Z",
   intervalMinutes: 15,
 };
 
@@ -24,32 +24,6 @@ const offers = [
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
     cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "miedzynarodowa-50a",
-    status: "call",
-    fromBrief: false,
-    updatedAt: "2026-07-09",
-    title: "Miedzynarodowa 50A / 80 m2",
-    source: "nowy trop",
-    url: "https://gethome.pl/oferta/wynajme-mieszkanie-warszawa-ul-miedzynarodowa-80m2-trzypokojowe-6-pietro-z-2004-roku-2291884",
-    location: { label: "Miedzynarodowa 50A", lat: 52.2352777, lng: 21.0666572, precision: "street" },
-    facts: [
-      "80 m2",
-      "3 pokoje",
-      "6/8",
-      "5290 + 1500 + 200",
-      "garaz 400",
-      "ok. 20 min",
-    ],
-    pros: [
-      "Dwie sypialnie, dwa balkony, osobna toaleta, prysznic i garaz.",
-      "Najlepszy stosunek metraz / koszt z dotychczasowych tropow.",
-    ],
-    cons: [
-      "Dystans jest na granicy awaryjnego maksimum.",
-      "Potwierdzic winde, internet i minimalne umeblowanie salonu.",
-    ],
   },
   {
     id: "saska-74",
