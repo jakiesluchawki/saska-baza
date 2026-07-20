@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-19T23:38:26.834Z",
+  lastUpdatedAt: "2026-07-20T01:12:39.640Z",
   intervalMinutes: 15,
 };
 
@@ -22,7 +22,7 @@ const offers = [
       "6000 + 1500 + prad",
       "parking",
       "ok. 12 min",
-      "rynek 59 dni",
+      "rynek 60 dni",
     ],
     pros: [
       "Dwie sypialnie, parking i budynek z 2010 roku.",
