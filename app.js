@@ -1,11 +1,31 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-21T09:58:47.238Z",
+  lastUpdatedAt: "2026-07-21T11:49:25.160Z",
   intervalMinutes: 15,
 };
 
 const offers = [
+  {
+    id: "auto-gratka-3-pokoje-po-remoncie-befbdb00",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-07-21T11:49:25.160Z",
+    marketDate: "2026-07-21",
+    updatedAt: "2026-07-21",
+    title: "3 pokoje po remoncie",
+    source: "auto 15 min",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-zwyciezcow/ob/48319747",
+    location: { label: "Zwyciezcow", lat: 52.2325, lng: 21.062, precision: "street" },
+    facts: [
+      "61 m2",
+      "3 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
   {
     id: "saska-74",
     status: "call",
