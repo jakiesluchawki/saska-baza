@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-21T23:10:31.061Z",
+  lastUpdatedAt: "2026-07-22T00:04:56.924Z",
   intervalMinutes: 15,
 };
 
@@ -19,7 +19,7 @@ const offers = [
     facts: [
       "60.0 m2",
       "3 pokoje",
-      "rynek dzisiaj",
+      "rynek wczoraj",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
@@ -39,7 +39,7 @@ const offers = [
     facts: [
       "61 m2",
       "3 pokoje",
-      "rynek dzisiaj",
+      "rynek wczoraj",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
@@ -61,7 +61,7 @@ const offers = [
       "6000 + 1500 + prad",
       "parking",
       "ok. 12 min",
-      "rynek 61 dni",
+      "rynek 62 dni",
     ],
     pros: [
       "Dwie sypialnie, parking i budynek z 2010 roku.",
