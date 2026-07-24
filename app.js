@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-24T08:44:04.054Z",
+  lastUpdatedAt: "2026-07-24T10:49:01.477Z",
   intervalMinutes: 15,
 };
 
@@ -104,22 +104,6 @@ const offers = [
     ],
     pros: ["Ulica bardzo dobra, wiec link zostaje jako punkt odniesienia."],
     cons: ["Bez windy i slaby standard. Przy kryteriach autora to odrzut."],
-  },
-  {
-    id: "saska-3p-brief",
-    status: "reject",
-    fromBrief: true,
-    updatedAt: "2026-05-21",
-    title: "Saska / 3 pokoje",
-    source: "z pierwszej karty",
-    url: "https://www.otodom.pl/pl/oferta/saska-3-pokoje-ID4Bs57",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
-    facts: [
-      "3 pokoje",
-      "z pierwszej karty",
-    ],
-    pros: ["Adres w dobrym obszarze."],
-    cons: ["Bez windy, wiec odpada przy kryteriach autora."],
   },
 ];
 
