@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-24T22:41:16.509Z",
+  lastUpdatedAt: "2026-07-24T23:43:06.075Z",
   intervalMinutes: 15,
 };
 
@@ -44,33 +44,6 @@ const offers = [
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
     cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "saska-74",
-    status: "call",
-    fromBrief: false,
-    marketDate: "2026-05-21",
-    title: "Saska / 74 m2",
-    source: "nowy trop",
-    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-saska-kepa-saska-74m2/156501275",
-    location: { label: "Saska 74", lat: 52.2353554, lng: 21.0596705, precision: "street" },
-    facts: [
-      "74 m2",
-      "3 pokoje",
-      "1/5",
-      "6000 + 1500 + prad",
-      "parking",
-      "ok. 12 min",
-      "rynek 64 dni",
-    ],
-    pros: [
-      "Dwie sypialnie, parking i budynek z 2010 roku.",
-      "Cena jeszcze miesci sie w logice 8-10k.",
-    ],
-    cons: [
-      "Winda, internet, pralka/zmywarka i widok wymagaja potwierdzenia.",
-      "Pierwsze pietro bez windy byloby odrzutem.",
-    ],
   },
   {
     id: "francuska-klimatyczne",
