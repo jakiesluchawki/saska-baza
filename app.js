@@ -1,50 +1,11 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-24T23:43:06.075Z",
+  lastUpdatedAt: "2026-07-25T01:11:22.379Z",
   intervalMinutes: 15,
 };
 
 const offers = [
-  {
-    id: "auto-domiporta-mieszkanie-trzypokojowe-na-wynajem-warszawa-prag-6114dda6",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-07-21T13:25:06.328Z",
-    marketDate: "2026-07-21",
-    title: "Mieszkanie trzypokojowe na wynajem Warszawa , Praga-Poludnie Saska Kepa , Urugwa",
-    source: "auto 15 min",
-    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-saska-kepa-urugwajska-60m2/156581074",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
-    facts: [
-      "60.0 m2",
-      "3 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gratka-3-pokoje-po-remoncie-befbdb00",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-07-21T11:49:25.160Z",
-    marketDate: "2026-07-21",
-    updatedAt: "2026-07-21",
-    title: "3 pokoje po remoncie",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-zwyciezcow/ob/48319747",
-    location: { label: "Zwyciezcow", lat: 52.2325, lng: 21.062, precision: "street" },
-    facts: [
-      "61 m2",
-      "3 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
   {
     id: "francuska-klimatyczne",
     status: "reject",
