@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-07-31T23:14:56.706Z",
+  lastUpdatedAt: "2026-08-01T00:12:37.732Z",
   intervalMinutes: 15,
 };
 
@@ -19,27 +19,7 @@ const offers = [
     facts: [
       "81.0 m2",
       "3 pokoje",
-      "rynek dzisiaj",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gratka-klimatyczny-apartament-na-saskiej-kepie-7b2b8ebb",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-07-28T12:26:06.246Z",
-    marketDate: "2026-07-28",
-    updatedAt: "2026-07-28",
-    title: "Klimatyczny apartament na Saskiej Kepie",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-lizbonska/ob/48409187",
-    location: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
-    facts: [
-      "70 m2",
-      "3 pokoje",
-      "rynek 3 dni",
+      "rynek wczoraj",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
