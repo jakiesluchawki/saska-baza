@@ -1,11 +1,31 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-08-03T16:55:31.352Z",
+  lastUpdatedAt: "2026-08-03T18:47:01.566Z",
   intervalMinutes: 15,
 };
 
 const offers = [
+  {
+    id: "auto-gratka-unikatowy-apartament-na-saskiej-kepie-a978e65a",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-08-03T18:47:01.566Z",
+    marketDate: "2026-08-03",
+    updatedAt: "2026-08-03",
+    title: "Unikatowy Apartament na Saskiej Kepie",
+    source: "auto 15 min",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-zwyciezcow/ob/48489033",
+    location: { label: "Zwyciezcow", lat: 52.2325, lng: 21.062, precision: "street" },
+    facts: [
+      "70 m2",
+      "3 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
   {
     id: "auto-gratka-saska-kepa-3-pokoje-z-duzym-tarasem-5a8f130c",
     status: "verify",
