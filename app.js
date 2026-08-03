@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-08-02T23:40:12.328Z",
+  lastUpdatedAt: "2026-08-03T01:14:31.753Z",
   intervalMinutes: 15,
 };
 
@@ -19,7 +19,7 @@ const offers = [
     facts: [
       "81.0 m2",
       "3 pokoje",
-      "rynek 2 dni",
+      "rynek 3 dni",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
