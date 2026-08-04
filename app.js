@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-08-04T05:14:28.410Z",
+  lastUpdatedAt: "2026-08-04T07:48:04.972Z",
   intervalMinutes: 15,
 };
 
@@ -45,39 +45,6 @@ const offers = [
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
     cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "francuska-klimatyczne",
-    status: "reject",
-    fromBrief: true,
-    updatedAt: "2026-06-24",
-    title: "Francuska / klimatyczne 3 pokoje",
-    source: "z pierwszej karty",
-    url: "https://www.otodom.pl/pl/oferta/klimatyczne-trzypokojowe-przy-francuskiej-ID4BDhJ",
-    location: { label: "Francuska", lat: 52.2317759, lng: 21.0557167, precision: "street" },
-    facts: [
-      "3 pokoje",
-      "lokalizacja OK",
-      "z pierwszej karty",
-    ],
-    pros: ["Adresowo kuszace, bo Francuska jest w samym obszarze poszukiwan."],
-    cons: ["Bez windy, zero mebli i bez prysznica. Must-have fail, nie tracic czasu."],
-  },
-  {
-    id: "walecznych-3p",
-    status: "reject",
-    fromBrief: true,
-    updatedAt: "2026-05-19",
-    title: "Walecznych / 3 pokoje",
-    source: "z pierwszej karty",
-    url: "https://www.otodom.pl/pl/oferta/3-pokoje-saska-kepa-walecznych-ID4kPFr",
-    location: { label: "Walecznych", lat: 52.2350911, lng: 21.0557063, precision: "street" },
-    facts: [
-      "3 pokoje",
-      "z pierwszej karty",
-    ],
-    pros: ["Ulica bardzo dobra, wiec link zostaje jako punkt odniesienia."],
-    cons: ["Bez windy i slaby standard. Przy kryteriach autora to odrzut."],
   },
 ];
 
