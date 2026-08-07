@@ -1,31 +1,12 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-08-07T23:07:01.824Z",
+  lastUpdatedAt: "2026-08-07T23:46:46.496Z",
   intervalMinutes: 15,
 };
 
 const offers = [
-  {
-    id: "auto-gratka-nowoczesny-apartament-adf92598",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-08-06T14:44:23.621Z",
-    marketDate: "2026-08-06",
-    updatedAt: "2026-08-06",
-    title: "Nowoczesny apartament",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-lizbonska/ob/48525827",
-    location: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
-    facts: [
-      "70 m2",
-      "3 pokoje",
-      "rynek wczoraj",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
+,
 ];
 
 const alerts = [
