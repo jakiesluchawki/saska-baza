@@ -5,9 +5,7 @@ const searchState = {
   intervalMinutes: 15,
 };
 
-const offers = [
-,
-];
+const offers = [];
 
 const alerts = [
   "Saska Kepa 3 pokoje winda 70 m2 wynajem",

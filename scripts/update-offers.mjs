@@ -611,7 +611,9 @@ function replaceSearchState(source, now) {
 }
 
 function replaceOffers(source, block, offers) {
-  const serialized = `const offers = [\n${offers.map(serializeOffer).join(",\n")},\n];`;
+  const serialized = offers.length
+    ? `const offers = [\n${offers.map(serializeOffer).join(",\n")},\n];`
+    : "const offers = [];";
   return `${source.slice(0, block.start)}${serialized}${source.slice(block.end)}`;
 }
 
