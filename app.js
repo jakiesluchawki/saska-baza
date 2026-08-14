@@ -1,51 +1,11 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-08-13T23:56:25.034Z",
+  lastUpdatedAt: "2026-08-14T01:43:38.538Z",
   intervalMinutes: 15,
 };
 
-const offers = [
-  {
-    id: "auto-domiporta-mieszkanie-trzypokojowe-na-wynajem-warszawa-prag-33ff6a46",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-08-10T19:40:43.397Z",
-    marketDate: "2026-08-10",
-    title: "Mieszkanie trzypokojowe na wynajem Warszawa , Praga-Poludnie , Saska Kepa , Zwyc",
-    source: "auto 15 min",
-    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-zwyciezcow-63-70m2/156606176",
-    location: { label: "Zwyciezcow", lat: 52.2325, lng: 21.062, precision: "street" },
-    facts: [
-      "70.0 m2",
-      "3 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-morizon-park-skaryszewski-245e9cf9",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-08-10T13:41:29.896Z",
-    marketDate: "2026-08-10",
-    updatedAt: "2026-08-10",
-    title: "Park Skaryszewski",
-    source: "auto 15 min",
-    url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-aleja-jerzego-waszyngtona-57m2-mzn2047893947",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
-    facts: [
-      "57 m2",
-      "3 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-];
+const offers = [];
 
 const alerts = [
   "Saska Kepa 3 pokoje winda 70 m2 wynajem",
