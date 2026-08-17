@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-08-17T09:06:40.326Z",
+  lastUpdatedAt: "2026-08-17T09:55:43.220Z",
   intervalMinutes: 15,
 };
 
@@ -12,7 +12,7 @@ const offers = [
     fromBrief: false,
     discoveredAt: "2026-08-14T17:26:49.246Z",
     marketDate: "2026-08-14",
-    updatedAt: "2026-08-14",
+    updatedAt: "2026-08-17",
     title: "3 pokoje Saska Kepa",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-miedzynarodowa/ob/48618503",
