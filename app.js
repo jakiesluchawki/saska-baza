@@ -1,32 +1,11 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-08-27T18:43:25.229Z",
+  lastUpdatedAt: "2026-08-28T02:20:52.055Z",
   intervalMinutes: 15,
 };
 
-const offers = [
-  {
-    id: "auto-morizon-saska-kepa-3-pokoje-55m2-piekny-widok-na-zielen-00fee580",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-08-24T10:09:02.408Z",
-    marketDate: "2026-08-24",
-    updatedAt: "2026-08-24",
-    title: "Saska Kepa, 3 pokoje, 55m2, piekny widok na zielen",
-    source: "auto 15 min",
-    url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-miedzynarodowa-55m2-mzn2047942200",
-    location: { label: "Miedzynarodowa", lat: 52.2352777, lng: 21.0666572, precision: "street" },
-    facts: [
-      "55 m2",
-      "3 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-];
+const offers = [];
 
 const alerts = [
   "Saska Kepa 3 pokoje winda 70 m2 wynajem",
