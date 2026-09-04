@@ -1,11 +1,32 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-09-04T13:39:37.026Z",
+  lastUpdatedAt: "2026-09-04T17:05:05.265Z",
   intervalMinutes: 15,
 };
 
-const offers = [];
+const offers = [
+  {
+    id: "auto-gratka-3-pokojowe-mieszkanie-wynajem-na-saskiej-kepie-3b149160",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-09-04T17:05:05.265Z",
+    marketDate: "2026-09-04",
+    updatedAt: "2026-09-04",
+    title: "3 pokojowe mieszkanie wynajem na Saskiej Kepie",
+    source: "auto 15 min",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-lizbonska/ob/48850759",
+    location: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
+    facts: [
+      "70 m2",
+      "3 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+];
 
 const alerts = [
   "Saska Kepa 3 pokoje winda 70 m2 wynajem",
