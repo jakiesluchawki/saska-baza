@@ -1,11 +1,30 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-09-05T13:32:15.569Z",
+  lastUpdatedAt: "2026-09-05T16:15:46.228Z",
   intervalMinutes: 15,
 };
 
 const offers = [
+  {
+    id: "auto-domiporta-mieszkanie-czteropokojowe-na-wynajem-warszawa-pr-0a1d484b",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-09-05T16:15:46.228Z",
+    marketDate: "2026-09-05",
+    title: "Mieszkanie czteropokojowe na wynajem Warszawa , Praga-Poludnie , Saska Kepa , Li",
+    source: "auto 15 min",
+    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-czteropokojowe-warszawa-praga-poludnie-lizbonska-83m2/156811646",
+    location: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
+    facts: [
+      "83.0 m2",
+      "4 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
   {
     id: "auto-gratka-3-pokojowe-mieszkanie-wynajem-na-saskiej-kepie-3b149160",
     status: "verify",
