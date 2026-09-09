@@ -1,11 +1,30 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-09-09T11:39:22.691Z",
+  lastUpdatedAt: "2026-09-09T15:17:19.499Z",
   intervalMinutes: 15,
 };
 
 const offers = [
+  {
+    id: "auto-domiporta-nowoczesny-3-pokojowy-apartament-na-saskiej-kepi-4f190d04",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-09-09T15:17:19.499Z",
+    marketDate: "2026-09-09",
+    title: "Nowoczesny 3-pokojowy apartament na Saskiej Kepie zapraszam Warszawa , Praga-Pol",
+    source: "auto 15 min",
+    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-lizbonska-70m2/156815970",
+    location: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
+    facts: [
+      "70.0 m2",
+      "3 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
   {
     id: "auto-gratka-komfortowe-3-pokoje-80-m-na-starej-saskiej-kepie-58098dff",
     status: "verify",
