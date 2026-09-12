@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-09-11T22:41:46.130Z",
+  lastUpdatedAt: "2026-09-12T00:39:28.707Z",
   intervalMinutes: 15,
 };
 
@@ -19,27 +19,7 @@ const offers = [
     facts: [
       "70.0 m2",
       "3 pokoje",
-      "rynek 2 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gratka-komfortowe-3-pokoje-80-m-na-starej-saskiej-kepie-58098dff",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-09-09T11:39:22.691Z",
-    marketDate: "2026-09-09",
-    updatedAt: "2026-09-09",
-    title: "Komfortowe 3 pokoje 80 m na starej Saskiej Kepie",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-zwyciezcow/ob/48895115",
-    location: { label: "Zwyciezcow", lat: 52.2325, lng: 21.062, precision: "street" },
-    facts: [
-      "80 m2",
-      "3 pokoje",
-      "rynek 2 dni",
+      "rynek 3 dni",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
