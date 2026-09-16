@@ -1,11 +1,72 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-09-16T10:17:49.757Z",
+  lastUpdatedAt: "2026-09-16T15:06:13.541Z",
   intervalMinutes: 15,
 };
 
-const offers = [];
+const offers = [
+  {
+    id: "auto-gratka-3-osobne-pokoje-55m2-saska-kepa-ul-afrykanska-ma-c8c82476",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-09-16T15:06:13.541Z",
+    marketDate: "2026-09-15",
+    updatedAt: "2026-09-16",
+    title: "3 osobne pokoje, 55m2, Saska Kepa, ul. Afrykanska /Marokanska",
+    source: "auto 15 min",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-afrykanska/ob/48970483",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
+    facts: [
+      "55 m2",
+      "3 pokoje",
+      "rynek wczoraj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+  {
+    id: "auto-morizon-saska-kepa-87ecc8d0",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-09-16T15:06:13.541Z",
+    marketDate: "2026-09-16",
+    updatedAt: "2026-09-16",
+    title: "Saska Kepa",
+    source: "auto 15 min",
+    url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-miedzynarodowa-58m2-mzn2048053037",
+    location: { label: "Miedzynarodowa", lat: 52.2352777, lng: 21.0666572, precision: "street" },
+    facts: [
+      "58 m2",
+      "3 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+  {
+    id: "auto-morizon-piekny-apartament-saska-kepa-62087ac8",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-09-16T15:06:13.541Z",
+    marketDate: "2026-09-16",
+    updatedAt: "2026-09-16",
+    title: "Piekny Apartament Saska Kepa",
+    source: "auto 15 min",
+    url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-plac-przymierza-70m2-mzn2048052661",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
+    facts: [
+      "70 m2",
+      "3 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+];
 
 const alerts = [
   "Saska Kepa 3 pokoje winda 70 m2 wynajem",
