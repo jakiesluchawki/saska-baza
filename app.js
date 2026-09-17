@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-09-17T00:00:34.540Z",
+  lastUpdatedAt: "2026-09-17T04:49:18.572Z",
   intervalMinutes: 15,
 };
 
@@ -12,7 +12,7 @@ const offers = [
     fromBrief: false,
     discoveredAt: "2026-09-16T15:06:13.541Z",
     marketDate: "2026-09-15",
-    updatedAt: "2026-09-16",
+    updatedAt: "2026-09-15",
     title: "3 osobne pokoje, 55m2, Saska Kepa, ul. Afrykanska /Marokanska",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-afrykanska/ob/48970483",
