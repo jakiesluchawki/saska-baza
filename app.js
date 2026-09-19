@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-09-18T23:19:53.568Z",
+  lastUpdatedAt: "2026-09-19T01:21:09.822Z",
   intervalMinutes: 15,
 };
 
@@ -19,27 +19,7 @@ const offers = [
     facts: [
       "81.55 m2",
       "3 pokoje",
-      "rynek wczoraj",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gratka-3-osobne-pokoje-55m2-saska-kepa-ul-afrykanska-ma-c8c82476",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-09-16T15:06:13.541Z",
-    marketDate: "2026-09-15",
-    updatedAt: "2026-09-15",
-    title: "3 osobne pokoje, 55m2, Saska Kepa, ul. Afrykanska /Marokanska",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-afrykanska/ob/48970483",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
-    facts: [
-      "55 m2",
-      "3 pokoje",
-      "rynek 3 dni",
+      "rynek 2 dni",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
@@ -59,7 +39,7 @@ const offers = [
     facts: [
       "58 m2",
       "3 pokoje",
-      "rynek 2 dni",
+      "rynek 3 dni",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
@@ -79,7 +59,7 @@ const offers = [
     facts: [
       "70 m2",
       "3 pokoje",
-      "rynek 2 dni",
+      "rynek 3 dni",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
