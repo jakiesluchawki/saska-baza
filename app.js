@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-09-19T23:32:34.054Z",
+  lastUpdatedAt: "2026-09-20T01:38:36.058Z",
   intervalMinutes: 15,
 };
 
@@ -18,46 +18,6 @@ const offers = [
     location: { label: "Walecznych", lat: 52.2350911, lng: 21.0557063, precision: "street" },
     facts: [
       "81.55 m2",
-      "3 pokoje",
-      "rynek 2 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-morizon-saska-kepa-87ecc8d0",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-09-16T15:06:13.541Z",
-    marketDate: "2026-09-16",
-    updatedAt: "2026-09-16",
-    title: "Saska Kepa",
-    source: "auto 15 min",
-    url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-miedzynarodowa-58m2-mzn2048053037",
-    location: { label: "Miedzynarodowa", lat: 52.2352777, lng: 21.0666572, precision: "street" },
-    facts: [
-      "58 m2",
-      "3 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-morizon-piekny-apartament-saska-kepa-62087ac8",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-09-16T15:06:13.541Z",
-    marketDate: "2026-09-16",
-    updatedAt: "2026-09-16",
-    title: "Piekny Apartament Saska Kepa",
-    source: "auto 15 min",
-    url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-plac-przymierza-70m2-mzn2048052661",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
-    facts: [
-      "70 m2",
       "3 pokoje",
       "rynek 3 dni",
       "auto 15 min",
