@@ -1,11 +1,52 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-09-21T13:06:15.608Z",
+  lastUpdatedAt: "2026-09-21T18:40:12.517Z",
   intervalMinutes: 15,
 };
 
-const offers = [];
+const offers = [
+  {
+    id: "auto-gratka-apartament-74-m-54997f1b",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-09-21T18:40:12.517Z",
+    marketDate: "2026-09-21",
+    updatedAt: "2026-09-21",
+    title: "Apartament 74 m",
+    source: "auto 15 min",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-generala-tadeusza-bora-komorowskiego/ob/49033285",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
+    facts: [
+      "74 m2",
+      "3 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+  {
+    id: "auto-morizon-apartament-74-m-4725a2d4",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-09-21T18:40:12.517Z",
+    marketDate: "2026-09-21",
+    updatedAt: "2026-09-21",
+    title: "Apartament 74 m",
+    source: "auto 15 min",
+    url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-generala-tadeusza-bora-komorowskiego-74m2-mzn2048074997",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
+    facts: [
+      "74 m2",
+      "3 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+];
 
 const alerts = [
   "Saska Kepa 3 pokoje winda 70 m2 wynajem",
