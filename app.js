@@ -1,31 +1,11 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-09-20T23:13:56.695Z",
+  lastUpdatedAt: "2026-09-21T01:07:52.571Z",
   intervalMinutes: 15,
 };
 
-const offers = [
-  {
-    id: "auto-domiporta-przestronne-3-pokojowe-mieszkanie-81-55-m-praga--fd81b1dd",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-09-17T18:32:56.071Z",
-    marketDate: "2026-09-17",
-    title: "Przestronne 3-pokojowe mieszkanie 81,55 m - Praga-Poludnie Warszawa , Praga-Polu",
-    source: "auto 15 min",
-    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-walecznych-82m2/156845087",
-    location: { label: "Walecznych", lat: 52.2350911, lng: 21.0557063, precision: "street" },
-    facts: [
-      "81.55 m2",
-      "3 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-];
+const offers = [];
 
 const alerts = [
   "Saska Kepa 3 pokoje winda 70 m2 wynajem",
