@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-09-23T08:11:33.913Z",
+  lastUpdatedAt: "2026-09-23T13:38:06.365Z",
   intervalMinutes: 15,
 };
 
@@ -32,7 +32,7 @@ const offers = [
     fromBrief: false,
     discoveredAt: "2026-09-21T18:40:12.517Z",
     marketDate: "2026-09-21",
-    updatedAt: "2026-09-21",
+    updatedAt: "2026-09-23",
     title: "Apartament 74 m",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-generala-tadeusza-bora-komorowskiego/ob/49033285",
@@ -52,7 +52,7 @@ const offers = [
     fromBrief: false,
     discoveredAt: "2026-09-21T18:40:12.517Z",
     marketDate: "2026-09-21",
-    updatedAt: "2026-09-21",
+    updatedAt: "2026-09-23",
     title: "Apartament 74 m",
     source: "auto 15 min",
     url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-generala-tadeusza-bora-komorowskiego-74m2-mzn2048074997",
