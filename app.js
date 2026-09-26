@@ -1,32 +1,11 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-09-25T23:32:34.283Z",
+  lastUpdatedAt: "2026-09-26T01:59:26.727Z",
   intervalMinutes: 15,
 };
 
-const offers = [
-  {
-    id: "auto-gratka-3-osobne-pokoje-55m2-saska-kepa-ul-afrykanska-ma-18105293",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-09-22T10:21:34.818Z",
-    marketDate: "2026-09-22",
-    updatedAt: "2026-09-22",
-    title: "3 osobne pokoje, 55m2, Saska Kepa, ul. Afrykanska /Marokanska",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-afrykanska/ob/49041531",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
-    facts: [
-      "55 m2",
-      "3 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-];
+const offers = [];
 
 const alerts = [
   "Saska Kepa 3 pokoje winda 70 m2 wynajem",
