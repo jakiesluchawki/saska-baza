@@ -1,11 +1,32 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-03T10:30:28.170Z",
+  lastUpdatedAt: "2026-10-03T14:54:46.432Z",
   intervalMinutes: 15,
 };
 
-const offers = [];
+const offers = [
+  {
+    id: "auto-gratka-dobry-adres-saska-kepa-8141f331",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-10-03T14:54:46.432Z",
+    marketDate: "2026-10-03",
+    updatedAt: "2026-10-03",
+    title: "Dobry adres Saska Kepa",
+    source: "auto 15 min",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-walecznych/ob/49172887",
+    location: { label: "Walecznych", lat: 52.2350911, lng: 21.0557063, precision: "street" },
+    facts: [
+      "70 m2",
+      "3 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+];
 
 const alerts = [
   "Saska Kepa 3 pokoje winda 70 m2 wynajem",
