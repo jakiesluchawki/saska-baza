@@ -1,11 +1,50 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-05T07:00:30.885Z",
+  lastUpdatedAt: "2026-10-05T15:58:26.613Z",
   intervalMinutes: 15,
 };
 
 const offers = [
+  {
+    id: "auto-domiporta-na-wynajem-przestronne-3-pokojowe-mieszkanie-71--401c44e9",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-10-05T15:58:26.613Z",
+    marketDate: "2026-10-03",
+    title: "Na wynajem przestronne 3-pokojowe mieszkanie 71 m w Warszawie Warszawa , Praga-P",
+    source: "auto 15 min",
+    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-walecznych-71m2/156944121",
+    location: { label: "Walecznych", lat: 52.2350911, lng: 21.0557063, precision: "street" },
+    facts: [
+      "71 m2",
+      "3 pokoje",
+      "rynek 2 dni",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+  {
+    id: "auto-gratka-saska-kepa-6622d097",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-10-05T15:58:26.613Z",
+    marketDate: "2026-10-05",
+    updatedAt: "2026-10-05",
+    title: "Saska Kepa",
+    source: "auto 15 min",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-berezynska/ob/49185975",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
+    facts: [
+      "73 m2",
+      "3 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
   {
     id: "auto-gratka-dobry-adres-saska-kepa-8141f331",
     status: "verify",
