@@ -1,11 +1,51 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-05T15:58:26.613Z",
+  lastUpdatedAt: "2026-10-05T22:22:10.274Z",
   intervalMinutes: 15,
 };
 
 const offers = [
+  {
+    id: "auto-gratka-klimatyczne-3-pokoje-z-ogrodem-73a7c290",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-10-05T22:22:10.274Z",
+    marketDate: "2026-10-05",
+    updatedAt: "2026-10-05",
+    title: "Klimatyczne 3 pokoje z ogrodem",
+    source: "auto 15 min",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-poselska/ob/49188031",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
+    facts: [
+      "60 m2",
+      "3 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+  {
+    id: "auto-morizon-klimatyczne-3-pokoje-z-ogrodem-4c1012df",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-10-05T22:22:10.274Z",
+    marketDate: "2026-10-05",
+    updatedAt: "2026-10-05",
+    title: "Klimatyczne 3 pokoje z ogrodem",
+    source: "auto 15 min",
+    url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-poselska-60m2-mzn2048157820",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
+    facts: [
+      "60 m2",
+      "3 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
   {
     id: "auto-domiporta-na-wynajem-przestronne-3-pokojowe-mieszkanie-71--401c44e9",
     status: "verify",
