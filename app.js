@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-06T09:11:18.149Z",
+  lastUpdatedAt: "2026-10-06T15:56:02.409Z",
   intervalMinutes: 15,
 };
 
@@ -91,7 +91,7 @@ const offers = [
     fromBrief: false,
     discoveredAt: "2026-10-03T14:54:46.432Z",
     marketDate: "2026-10-03",
-    updatedAt: "2026-10-03",
+    updatedAt: "2026-10-06",
     title: "Dobry adres Saska Kepa",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-walecznych/ob/49172887",
