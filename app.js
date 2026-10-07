@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-06T20:45:38.622Z",
+  lastUpdatedAt: "2026-10-07T00:18:04.013Z",
   intervalMinutes: 15,
 };
 
@@ -20,7 +20,7 @@ const offers = [
     facts: [
       "60 m2",
       "3 pokoje",
-      "rynek wczoraj",
+      "rynek 2 dni",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
@@ -40,26 +40,7 @@ const offers = [
     facts: [
       "60 m2",
       "3 pokoje",
-      "rynek wczoraj",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-domiporta-na-wynajem-przestronne-3-pokojowe-mieszkanie-71--401c44e9",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-10-05T15:58:26.613Z",
-    marketDate: "2026-10-03",
-    title: "Na wynajem przestronne 3-pokojowe mieszkanie 71 m w Warszawie Warszawa , Praga-P",
-    source: "auto 15 min",
-    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-walecznych-71m2/156944121",
-    location: { label: "Walecznych", lat: 52.2350911, lng: 21.0557063, precision: "street" },
-    facts: [
-      "71 m2",
-      "3 pokoje",
-      "rynek 3 dni",
+      "rynek 2 dni",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
@@ -79,27 +60,7 @@ const offers = [
     facts: [
       "73 m2",
       "3 pokoje",
-      "rynek wczoraj",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gratka-dobry-adres-saska-kepa-8141f331",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-10-03T14:54:46.432Z",
-    marketDate: "2026-10-03",
-    updatedAt: "2026-10-06",
-    title: "Dobry adres Saska Kepa",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-walecznych/ob/49172887",
-    location: { label: "Walecznych", lat: 52.2350911, lng: 21.0557063, precision: "street" },
-    facts: [
-      "70 m2",
-      "3 pokoje",
-      "rynek 3 dni",
+      "rynek 2 dni",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
