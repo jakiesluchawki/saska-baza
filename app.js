@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-08T11:19:59.142Z",
+  lastUpdatedAt: "2026-10-08T17:55:43.331Z",
   intervalMinutes: 15,
 };
 
@@ -32,7 +32,7 @@ const offers = [
     fromBrief: false,
     discoveredAt: "2026-10-05T22:22:10.274Z",
     marketDate: "2026-10-05",
-    updatedAt: "2026-10-05",
+    updatedAt: "2026-10-08",
     title: "Klimatyczne 3 pokoje z ogrodem",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-poselska/ob/49188031",
@@ -52,7 +52,7 @@ const offers = [
     fromBrief: false,
     discoveredAt: "2026-10-05T22:22:10.274Z",
     marketDate: "2026-10-05",
-    updatedAt: "2026-10-05",
+    updatedAt: "2026-10-08",
     title: "Klimatyczne 3 pokoje z ogrodem",
     source: "auto 15 min",
     url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-poselska-60m2-mzn2048157820",
