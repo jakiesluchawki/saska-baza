@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-10T01:04:04.435Z",
+  lastUpdatedAt: "2026-10-10T07:03:27.946Z",
   intervalMinutes: 15,
 };
 
@@ -12,7 +12,7 @@ const offers = [
     fromBrief: false,
     discoveredAt: "2026-10-07T19:31:47.532Z",
     marketDate: "2026-10-07",
-    updatedAt: "2026-10-08",
+    updatedAt: "2026-10-09",
     title: "3-pokojowe mieszkanie na Saskiej Kepie [NA WYLACZNOSC]",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-walecznych/ob/49215273",
