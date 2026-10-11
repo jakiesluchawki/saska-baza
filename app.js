@@ -1,32 +1,11 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-10T21:40:33.678Z",
+  lastUpdatedAt: "2026-10-11T00:29:08.673Z",
   intervalMinutes: 15,
 };
 
-const offers = [
-  {
-    id: "auto-gratka-3-pokojowe-mieszkanie-na-saskiej-kepie-na-wylacz-51cae2bb",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-10-07T19:31:47.532Z",
-    marketDate: "2026-10-07",
-    updatedAt: "2026-10-09",
-    title: "3-pokojowe mieszkanie na Saskiej Kepie [NA WYLACZNOSC]",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-walecznych/ob/49215273",
-    location: { label: "Walecznych", lat: 52.2350911, lng: 21.0557063, precision: "street" },
-    facts: [
-      "70 m2",
-      "3 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-];
+const offers = [];
 
 const alerts = [
   "Saska Kepa 3 pokoje winda 70 m2 wynajem",
