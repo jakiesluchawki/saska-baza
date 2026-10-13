@@ -1,11 +1,51 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-13T11:05:53.354Z",
+  lastUpdatedAt: "2026-10-13T18:16:09.567Z",
   intervalMinutes: 15,
 };
 
 const offers = [
+  {
+    id: "auto-gratka-saska-kepa-939e177d",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-10-13T18:16:09.567Z",
+    marketDate: "2026-10-13",
+    updatedAt: "2026-10-13",
+    title: "Saska Kepa",
+    source: "auto 15 min",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-kanadyjska/ob/49282005",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
+    facts: [
+      "76 m2",
+      "4 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+  {
+    id: "auto-gratka-zobacz-przestronne-mieszkanie-w-kamienicy-315004db",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-10-13T18:16:09.567Z",
+    marketDate: "2026-10-13",
+    updatedAt: "2026-10-13",
+    title: "Zobacz >>> Przestronne mieszkanie w kamienicy",
+    source: "auto 15 min",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-aleja-jerzego-waszyngtona/ob/49280057",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
+    facts: [
+      "68 m2",
+      "3 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
   {
     id: "auto-gratka-saska-kepa-8d1e5943",
     status: "verify",
