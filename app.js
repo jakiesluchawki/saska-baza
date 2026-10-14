@@ -1,18 +1,58 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-14T06:42:20.694Z",
+  lastUpdatedAt: "2026-10-14T12:24:07.078Z",
   intervalMinutes: 15,
 };
 
 const offers = [
+  {
+    id: "auto-gratka-unikalne-i-czarujace-4-pokoje-po-remoncie-e42372de",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-10-14T12:24:07.078Z",
+    marketDate: "2026-10-14",
+    updatedAt: "2026-10-14",
+    title: "Unikalne i czarujace 4 pokoje po remoncie",
+    source: "auto 15 min",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-genewska/ob/49290767",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
+    facts: [
+      "96 m2",
+      "4 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+  {
+    id: "auto-morizon-unikalne-i-czarujace-4-pokoje-po-remoncie-0db388ba",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-10-14T12:24:07.078Z",
+    marketDate: "2026-10-14",
+    updatedAt: "2026-10-14",
+    title: "Unikalne i czarujace 4 pokoje po remoncie",
+    source: "auto 15 min",
+    url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-genewska-96m2-mzn2048206835",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
+    facts: [
+      "96 m2",
+      "4 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
   {
     id: "auto-gratka-saska-kepa-939e177d",
     status: "verify",
     fromBrief: false,
     discoveredAt: "2026-10-13T18:16:09.567Z",
     marketDate: "2026-10-13",
-    updatedAt: "2026-10-13",
+    updatedAt: "2026-10-14",
     title: "Saska Kepa",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-kanadyjska/ob/49282005",
