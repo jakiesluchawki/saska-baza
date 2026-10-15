@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-14T23:35:26.011Z",
+  lastUpdatedAt: "2026-10-15T01:50:08.445Z",
   intervalMinutes: 15,
 };
 
@@ -20,7 +20,7 @@ const offers = [
     facts: [
       "96 m2",
       "4 pokoje",
-      "rynek dzisiaj",
+      "rynek wczoraj",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
@@ -40,7 +40,7 @@ const offers = [
     facts: [
       "96 m2",
       "4 pokoje",
-      "rynek dzisiaj",
+      "rynek wczoraj",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
@@ -60,7 +60,7 @@ const offers = [
     facts: [
       "76 m2",
       "4 pokoje",
-      "rynek wczoraj",
+      "rynek 2 dni",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
@@ -80,7 +80,7 @@ const offers = [
     facts: [
       "68 m2",
       "3 pokoje",
-      "rynek wczoraj",
+      "rynek 2 dni",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
@@ -99,26 +99,6 @@ const offers = [
     location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
     facts: [
       "96 m2",
-      "3 pokoje",
-      "rynek 2 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gratka-3-pokoje-garaz-plac-przymierza-6-saska-kepa-e72d6092",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-10-11T13:12:54.928Z",
-    marketDate: "2026-10-11",
-    updatedAt: "2026-10-11",
-    title: "3 pokoje Garaz. Plac Przymierza 6 Saska Kepa",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-plac-przymierza/ob/49263563",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
-    facts: [
-      "83 m2",
       "3 pokoje",
       "rynek 3 dni",
       "auto 15 min",
