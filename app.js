@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-15T06:50:26.091Z",
+  lastUpdatedAt: "2026-10-15T12:22:48.078Z",
   intervalMinutes: 15,
 };
 
@@ -12,7 +12,7 @@ const offers = [
     fromBrief: false,
     discoveredAt: "2026-10-14T12:24:07.078Z",
     marketDate: "2026-10-14",
-    updatedAt: "2026-10-14",
+    updatedAt: "2026-10-15",
     title: "Unikalne i czarujace 4 pokoje po remoncie",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-genewska/ob/49290767",
@@ -32,7 +32,7 @@ const offers = [
     fromBrief: false,
     discoveredAt: "2026-10-14T12:24:07.078Z",
     marketDate: "2026-10-14",
-    updatedAt: "2026-10-14",
+    updatedAt: "2026-10-15",
     title: "Unikalne i czarujace 4 pokoje po remoncie",
     source: "auto 15 min",
     url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-genewska-96m2-mzn2048206835",
@@ -72,7 +72,7 @@ const offers = [
     fromBrief: false,
     discoveredAt: "2026-10-13T18:16:09.567Z",
     marketDate: "2026-10-13",
-    updatedAt: "2026-10-13",
+    updatedAt: "2026-10-15",
     title: "Zobacz >>> Przestronne mieszkanie w kamienicy",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-aleja-jerzego-waszyngtona/ob/49280057",
