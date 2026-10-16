@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-15T23:09:05.235Z",
+  lastUpdatedAt: "2026-10-16T01:18:34.886Z",
   intervalMinutes: 15,
 };
 
@@ -20,7 +20,7 @@ const offers = [
     facts: [
       "96 m2",
       "4 pokoje",
-      "rynek wczoraj",
+      "rynek 2 dni",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
@@ -40,7 +40,7 @@ const offers = [
     facts: [
       "96 m2",
       "4 pokoje",
-      "rynek wczoraj",
+      "rynek 2 dni",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
@@ -60,7 +60,7 @@ const offers = [
     facts: [
       "76 m2",
       "4 pokoje",
-      "rynek 2 dni",
+      "rynek 3 dni",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
@@ -79,26 +79,6 @@ const offers = [
     location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
     facts: [
       "68 m2",
-      "3 pokoje",
-      "rynek 2 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gratka-saska-kepa-8d1e5943",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-10-12T16:23:28.944Z",
-    marketDate: "2026-10-12",
-    updatedAt: "2026-10-12",
-    title: "Saska Kepa",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-argentynska/ob/49269809",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
-    facts: [
-      "96 m2",
       "3 pokoje",
       "rynek 3 dni",
       "auto 15 min",
