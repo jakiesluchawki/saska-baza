@@ -1,52 +1,11 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-17T22:39:29.938Z",
+  lastUpdatedAt: "2026-10-18T00:19:19.918Z",
   intervalMinutes: 15,
 };
 
-const offers = [
-  {
-    id: "auto-gratka-unikalne-i-czarujace-4-pokoje-po-remoncie-e42372de",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-10-14T12:24:07.078Z",
-    marketDate: "2026-10-14",
-    updatedAt: "2026-10-15",
-    title: "Unikalne i czarujace 4 pokoje po remoncie",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-genewska/ob/49290767",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
-    facts: [
-      "96 m2",
-      "4 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-morizon-unikalne-i-czarujace-4-pokoje-po-remoncie-0db388ba",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-10-14T12:24:07.078Z",
-    marketDate: "2026-10-14",
-    updatedAt: "2026-10-15",
-    title: "Unikalne i czarujace 4 pokoje po remoncie",
-    source: "auto 15 min",
-    url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-genewska-96m2-mzn2048206835",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
-    facts: [
-      "96 m2",
-      "4 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-];
+const offers = [];
 
 const alerts = [
   "Saska Kepa 3 pokoje winda 70 m2 wynajem",
