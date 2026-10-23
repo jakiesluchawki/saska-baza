@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-23T05:39:15.431Z",
+  lastUpdatedAt: "2026-10-23T10:30:13.780Z",
   intervalMinutes: 15,
 };
 
@@ -12,7 +12,7 @@ const offers = [
     fromBrief: false,
     discoveredAt: "2026-10-22T14:48:39.732Z",
     marketDate: "2026-10-22",
-    updatedAt: "2026-10-22",
+    updatedAt: "2026-10-23",
     title: "Trzy pokoje, balkon i garaz, Saska Kepa",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-plac-przymierza/ob/49377535",
