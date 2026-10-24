@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-23T22:30:08.108Z",
+  lastUpdatedAt: "2026-10-24T00:58:43.315Z",
   intervalMinutes: 15,
 };
 
@@ -20,7 +20,7 @@ const offers = [
     facts: [
       "70 m2",
       "3 pokoje",
-      "rynek wczoraj",
+      "rynek 2 dni",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
@@ -40,7 +40,7 @@ const offers = [
     facts: [
       "62 m2",
       "3 pokoje",
-      "rynek wczoraj",
+      "rynek 2 dni",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
@@ -58,46 +58,6 @@ const offers = [
     location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
     facts: [
       "92.0 m2",
-      "3 pokoje",
-      "rynek 2 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gratka-mieszkanie-na-saskiej-kepie-ef2b0e7a",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-10-21T02:01:17.382Z",
-    marketDate: "2026-10-20",
-    updatedAt: "2026-10-20",
-    title: "Mieszkanie na Saskiej Kepie",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-lizbonska/ob/49357921",
-    location: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
-    facts: [
-      "18 m2",
-      "3 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-morizon-mieszkanie-na-saskiej-kepie-d6e26e35",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-10-21T02:01:17.382Z",
-    marketDate: "2026-10-20",
-    updatedAt: "2026-10-20",
-    title: "Mieszkanie na Saskiej Kepie",
-    source: "auto 15 min",
-    url: "https://www.morizon.pl/oferta/wynajem-mieszkanie-warszawa-praga-poludnie-lizbonska-59m2-mzn2048242934",
-    location: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
-    facts: [
-      "18 m2",
       "3 pokoje",
       "rynek 3 dni",
       "auto 15 min",
