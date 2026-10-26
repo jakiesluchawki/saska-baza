@@ -1,52 +1,11 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-25T22:02:15.517Z",
+  lastUpdatedAt: "2026-10-26T00:19:30.280Z",
   intervalMinutes: 15,
 };
 
-const offers = [
-  {
-    id: "auto-gratka-trzy-pokoje-balkon-i-garaz-saska-kepa-cd602edb",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-10-22T14:48:39.732Z",
-    marketDate: "2026-10-22",
-    updatedAt: "2026-10-24",
-    title: "Trzy pokoje, balkon i garaz, Saska Kepa",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-plac-przymierza/ob/49377535",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
-    facts: [
-      "70 m2",
-      "3 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gratka-saska-kepa-afe4073c",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-10-22T14:48:39.732Z",
-    marketDate: "2026-10-22",
-    updatedAt: "2026-10-22",
-    title: "Saska Kepa",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-londynska/ob/49378133",
-    location: { label: "Londynska", lat: 52.2377035, lng: 21.0625802, precision: "street" },
-    facts: [
-      "62 m2",
-      "3 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-];
+const offers = [];
 
 const alerts = [
   "Saska Kepa 3 pokoje winda 70 m2 wynajem",
