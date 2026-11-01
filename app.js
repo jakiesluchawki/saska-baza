@@ -1,32 +1,11 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-10-31T23:44:27.893Z",
+  lastUpdatedAt: "2026-11-01T02:38:04.473Z",
   intervalMinutes: 15,
 };
 
-const offers = [
-  {
-    id: "auto-gratka-apartament-w-samym-sercu-saskiej-kepy-70m2-garaz-053b903c",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-10-28T18:36:08.450Z",
-    marketDate: "2026-10-28",
-    updatedAt: "2026-10-28",
-    title: "Apartament w samym sercu Saskiej Kepy 70m2 garaz w cenie",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-plac-przymierza/ob/49439137",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
-    facts: [
-      "70 m2",
-      "3 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-];
+const offers = [];
 
 const alerts = [
   "Saska Kepa 3 pokoje winda 70 m2 wynajem",
