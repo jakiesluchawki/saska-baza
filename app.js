@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-11-04T03:05:16.623Z",
+  lastUpdatedAt: "2026-11-04T10:51:08.394Z",
   intervalMinutes: 15,
 };
 
@@ -12,7 +12,7 @@ const offers = [
     fromBrief: false,
     discoveredAt: "2026-11-03T18:01:50.282Z",
     marketDate: "2026-11-03",
-    updatedAt: "2026-11-03",
+    updatedAt: "2026-11-04",
     title: "3 pokoje po remoncie",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-zwyciezcow/ob/49528761",
