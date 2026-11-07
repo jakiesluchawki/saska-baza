@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-11-06T21:03:23.589Z",
+  lastUpdatedAt: "2026-11-07T00:53:58.006Z",
   intervalMinutes: 15,
 };
 
@@ -20,47 +20,7 @@ const offers = [
     facts: [
       "63 m2",
       "3 pokoje",
-      "rynek dzisiaj",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gratka-3-pokoje-po-remoncie-13d31aa6",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-11-03T18:01:50.282Z",
-    marketDate: "2026-11-03",
-    updatedAt: "2026-11-04",
-    title: "3 pokoje po remoncie",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-zwyciezcow/ob/49528761",
-    location: { label: "Zwyciezcow", lat: 52.2325, lng: 21.062, precision: "street" },
-    facts: [
-      "61 m2",
-      "3 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gratka-saska-kepa-3-pokoje-z-duzym-tarasem-4d2a262c",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-11-03T18:01:50.282Z",
-    marketDate: "2026-11-03",
-    updatedAt: "2026-11-03",
-    title: "Saska Kepa, 3 pokoje z duzym tarasem",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-atenska/ob/49528327",
-    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
-    facts: [
-      "92 m2",
-      "3 pokoje",
-      "rynek 3 dni",
+      "rynek wczoraj",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
