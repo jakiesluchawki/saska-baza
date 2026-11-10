@@ -1,32 +1,11 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-11-09T20:41:36.149Z",
+  lastUpdatedAt: "2026-11-10T02:55:22.487Z",
   intervalMinutes: 15,
 };
 
-const offers = [
-  {
-    id: "auto-gratka-3-pokoje-59cea846",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-11-06T15:32:58.614Z",
-    marketDate: "2026-11-06",
-    updatedAt: "2026-11-06",
-    title: "3 pokoje",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-lizbonska/ob/49574071",
-    location: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
-    facts: [
-      "63 m2",
-      "3 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-];
+const offers = [];
 
 const alerts = [
   "Saska Kepa 3 pokoje winda 70 m2 wynajem",
