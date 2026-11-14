@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-11-13T22:53:08.423Z",
+  lastUpdatedAt: "2026-11-14T02:51:30.371Z",
   intervalMinutes: 15,
 };
 
@@ -20,27 +20,7 @@ const offers = [
     facts: [
       "86 m2",
       "3 pokoje",
-      "rynek wczoraj",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-  {
-    id: "auto-gratka-pierwszy-najem-4ff7d7df",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-11-10T18:15:56.448Z",
-    marketDate: "2026-11-10",
-    updatedAt: "2026-11-10",
-    title: "Pierwszy najem",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-meksykanska/ob/49649633",
-    location: { label: "Meksykanska", lat: 52.2309343, lng: 21.0597695, precision: "street" },
-    facts: [
-      "88 m2",
-      "3 pokoje",
-      "rynek 3 dni",
+      "rynek 2 dni",
       "auto 15 min",
     ],
     pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
