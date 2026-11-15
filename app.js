@@ -1,7 +1,7 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-11-15T00:18:35.249Z",
+  lastUpdatedAt: "2026-11-15T06:54:31.060Z",
   intervalMinutes: 15,
 };
 
@@ -12,7 +12,7 @@ const offers = [
     fromBrief: false,
     discoveredAt: "2026-11-12T16:29:28.357Z",
     marketDate: "2026-11-12",
-    updatedAt: "2026-11-13",
+    updatedAt: "2026-11-14",
     title: "Luksusowy apartament na Saskiej Kepie [NA WYLACZNOSC]",
     source: "auto 15 min",
     url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-londynska/ob/49667125",
