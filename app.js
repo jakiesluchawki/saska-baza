@@ -1,32 +1,11 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-11-15T23:40:57.454Z",
+  lastUpdatedAt: "2026-11-16T03:07:55.139Z",
   intervalMinutes: 15,
 };
 
-const offers = [
-  {
-    id: "auto-gratka-luksusowy-apartament-na-saskiej-kepie-na-wylaczn-a84fee56",
-    status: "verify",
-    fromBrief: false,
-    discoveredAt: "2026-11-12T16:29:28.357Z",
-    marketDate: "2026-11-12",
-    updatedAt: "2026-11-14",
-    title: "Luksusowy apartament na Saskiej Kepie [NA WYLACZNOSC]",
-    source: "auto 15 min",
-    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-londynska/ob/49667125",
-    location: { label: "Londynska", lat: 52.2377035, lng: 21.0625802, precision: "street" },
-    facts: [
-      "86 m2",
-      "3 pokoje",
-      "rynek 3 dni",
-      "auto 15 min",
-    ],
-    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
-    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
-  },
-];
+const offers = [];
 
 const alerts = [
   "Saska Kepa 3 pokoje winda 70 m2 wynajem",
