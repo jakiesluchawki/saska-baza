@@ -1,11 +1,31 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-11-18T10:57:53.925Z",
+  lastUpdatedAt: "2026-11-18T19:15:17.687Z",
   intervalMinutes: 15,
 };
 
-const offers = [];
+const offers = [
+  {
+    id: "auto-domiporta-mieszkanie-trzypokojowe-na-wynajem-warszawa-prag-2243aed6",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-11-18T19:15:17.687Z",
+    marketDate: "2026-11-18",
+    title: "Mieszkanie trzypokojowe na wynajem Warszawa , Praga-Poludnie , Saska Kepa , Lizb",
+    source: "auto 15 min",
+    url: "https://www.domiporta.pl/nieruchomosci/wynajme-mieszkanie-trzypokojowe-warszawa-praga-poludnie-lizbonska-70m2/157015969",
+    location: { label: "Lizbonska", lat: 52.2276098, lng: 21.0641878, precision: "street" },
+    facts: [
+      "70.0 m2",
+      "3 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
+];
 
 const alerts = [
   "Saska Kepa 3 pokoje winda 70 m2 wynajem",
