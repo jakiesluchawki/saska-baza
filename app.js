@@ -1,11 +1,31 @@
 // Zasada utrzymania: oferty z data dodania 2025 albo tagiem typu
 // @ogloszenie archiwalne usuwamy z listy, bez przenoszenia do reject/benchmark.
 const searchState = {
-  lastUpdatedAt: "2026-11-20T07:44:44.804Z",
+  lastUpdatedAt: "2026-11-20T16:23:27.402Z",
   intervalMinutes: 15,
 };
 
 const offers = [
+  {
+    id: "auto-gratka-saska-kepa-21fed168",
+    status: "verify",
+    fromBrief: false,
+    discoveredAt: "2026-11-20T16:23:27.402Z",
+    marketDate: "2026-11-20",
+    updatedAt: "2026-11-20",
+    title: "Saska Kepa",
+    source: "auto 15 min",
+    url: "https://gratka.pl/nieruchomosci/mieszkanie-warszawa-praga-poludnie-kanadyjska/ob/49748287",
+    location: { label: "Saska Kepa", lat: 52.2329941, lng: 21.0571754, precision: "area" },
+    facts: [
+      "76 m2",
+      "4 pokoje",
+      "rynek dzisiaj",
+      "auto 15 min",
+    ],
+    pros: ["Swiezy wynik z automatycznego przegladu; sprawdzic dopasowanie do must-have."],
+    cons: ["Do weryfikacji: aktualnosc, pelny koszt, winda albo parter z ogrodem, dwie sypialnie i pies."],
+  },
   {
     id: "auto-domiporta-mieszkanie-trzypokojowe-na-wynajem-warszawa-prag-2243aed6",
     status: "verify",
